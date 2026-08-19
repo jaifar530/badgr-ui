@@ -229,13 +229,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 			}
 		});
 
-		try {
-			// @ts-expect-error umami is injected globally
-			// Start umami tracking
-			umami.track();
-		} catch (e) {
-			console.error(e);
-		}
+		// Upstream's umami analytics script was removed (it reported to
+		// openbadges.education). The call is removed too - it only produced a
+		// ReferenceError in the console on every page load.
 
 		messageService.useRouter(router);
 

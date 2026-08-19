@@ -135,7 +135,7 @@ export class BgBadgeDetail {
 
 	calculateStudyLoad(lp: LearningPath | PublicApiLearningPath): number {
 		const totalStudyLoad = lp.badges.reduce(
-			(acc, b) => acc + b.badge.extensions['extensions:StudyLoadExtension'].StudyLoad,
+			(acc, b) => acc + (b.badge.extensions?.['extensions:StudyLoadExtension']?.StudyLoad ?? 0),
 			0,
 		);
 		return totalStudyLoad;

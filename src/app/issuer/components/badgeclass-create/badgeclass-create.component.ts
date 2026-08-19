@@ -93,7 +93,7 @@ export class BadgeClassCreateComponent extends BaseAuthenticatedRoutableComponen
 		// Check if there is a badge ID in the state and fetch it if necessary
 		if (this.navigationState && this.navigationState.copybadgeid) {
 			this.badgeClassService.issuerBadgeById(this.navigationState.copybadgeid).then((badge) => {
-				this.category = badge.extension['extensions:CategoryExtension'].Category;
+				this.category = badge.extension?.['extensions:CategoryExtension']?.Category;
 				this.copiedBadgeClass = badge;
 			});
 		}

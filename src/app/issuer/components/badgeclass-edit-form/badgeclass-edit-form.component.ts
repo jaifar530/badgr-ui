@@ -569,7 +569,7 @@ export class BadgeClassEditFormComponent
 			this.forbiddenImage = badgeClass.extension['extensions:OrgImageExtension']?.OrgImage
 				? (() => {
 						const hash = new Md5()
-							.appendStr(badgeClass.extension['extensions:OrgImageExtension'].OrgImage)
+							.appendStr(badgeClass.extension?.['extensions:OrgImageExtension']?.OrgImage ?? '')
 							.end();
 						return typeof hash === 'string' ? hash : hash.join('');
 					})()
@@ -580,7 +580,7 @@ export class BadgeClassEditFormComponent
 		}
 
 		// transform minutes into hours and minutes
-		let competencies = (badgeClass.extension['extensions:CompetencyExtension'] || []).map((comp) => {
+		let competencies = (badgeClass.extension?.['extensions:CompetencyExtension'] || []).map((comp) => {
 			return { ...comp, hours: Math.floor(comp.studyLoad / 60), minutes: comp.studyLoad % 60 };
 		});
 
