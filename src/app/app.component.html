@@ -331,7 +331,7 @@
 				/>
 				<p [innerHTML]="'Issuer.betaPhase' | translate"></p>
 			</div>
-			<div class="tw-flex md:tw-hidden tw-flex-col tw-text-sm md:tw-text-base tw-text-oebblack">
+			<div class="tw-flex md:tw-hidden tw-flex-col tw-gap-y-2 tw-text-sm md:tw-text-base tw-text-oebblack">
 				@if (cmsMenus && cmsMenus.footer[translate.currentLang]) {
 					@for (item of cmsMenus.footer[translate.currentLang]; track item) {
 						<a class="tw-text-oebblack tw-basis-1/2 tw-grow-1 tw-p-1.5" href="{{ item.url }}">{{
@@ -391,7 +391,7 @@
 <div class="tw-relative tw-w-full" [class.tw-hidden]="mobileNavOpen">
 	<div class="page-padding oeb logos-container md:tw-flex md:tw-justify-between">
 		<div
-			class="tw-hidden md:tw-flex tw-flex-row tw-flex-wrap tw-w-full tw-text-sm md:tw-text-lg md:tw-leading-tight"
+			class="tw-hidden md:tw-flex tw-flex-row tw-flex-wrap tw-items-center tw-gap-x-3 tw-gap-y-1 tw-w-full tw-text-sm md:tw-text-lg md:tw-leading-tight"
 		>
 			@if (cmsMenus && cmsMenus.footer[translate.currentLang]) {
 				@for (item of cmsMenus.footer[translate.currentLang]; track item) {
@@ -405,8 +405,11 @@
 				}
 			} @else {
 				<a class="tw-font-semibold md:tw-font-medium tw-text-oebblack" [routerLink]="['/public/faq']">FAQ</a>
+				<span class="tw-text-oebblack tw-opacity-40" aria-hidden="true">|</span>
 				<a class="tw-text-oebblack" [href]="theme.imprintLink">{{ 'Start.imprint' | translate }}</a>
+				<span class="tw-text-oebblack tw-opacity-40" aria-hidden="true">|</span>
 				<a class="tw-text-oebblack" [href]="theme.privacyPolicyLink">{{ 'Start.privacyPolicy' | translate }}</a>
+				<span class="tw-text-oebblack tw-opacity-40" aria-hidden="true">|</span>
 				<a class="tw-text-oebblack" [href]="theme.termsOfServiceLink">{{ 'General.tos' | translate }}</a>
 			}
 		</div>
