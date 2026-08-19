@@ -1,0 +1,62 @@
+name: Build + deploy dashboard.wissam.om
+
+on:
+  push:
+    branches: [wissam]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dashboard
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build:app
+      - run: npm run build:web-components:prod
+
+      # A failed build must NEVER ship a stale bundle (learned 19 Aug 2026:
+      # a swallowed build error once deployed yesterday's dist).
+      - name: Pre-deploy gates
+        run: |
+          P=$(grep -rl "652673" dist/ --include="*.js" | wc -l)
+          D=$(grep -ro "changeLng(.de.)" dist/ --include="*.js" | wc -l)
+          U=$(grep -c umami dist/index.html || true)
+          T=$(find dist -name "tajawal*" | wc -l)
+          echo "palette=$P DE=$D umami=$U tajawal=$T"
+          [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ]
+
+      - name: Brand the page title
+        run: sed -i 's|<title>Open Educational Badges</title>|<title>Wissam — وسام</title>|' dist/index.html
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 212.24.97.111 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Ship dist (previous kept as dist.old for rollback)
+        run: |
+          tar -czf dist.tgz dist
+          scp -i ~/.ssh/deploy_key dist.tgz wissam@212.24.97.111:/tmp/
+          ssh -i ~/.ssh/deploy_key wissam@212.24.97.111 '
+            set -e
+            rm -rf /home/wissam/badgr-ui/dist.old
+            mv /home/wissam/badgr-ui/dist /home/wissam/badgr-ui/dist.old
+            tar -xzf /tmp/dist.tgz -C /home/wissam/badgr-ui/
+            rm -f /tmp/dist.tgz'
+
+      - name: Verify live
+        run: |
+          sleep 5
+          curl -s --max-time 30 https://dashboard.wissam.om/ | grep -q "Wissam" && echo "dashboard OK"
