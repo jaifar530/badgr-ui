@@ -33,10 +33,142 @@ import {
 	isOB3Assertion,
 } from '~/common/util/assertion-helper';
 import { ApiBadgeInstanceEvidenceItem } from '~/issuer/models/badgeinstance-api.model';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-	template: ` <bg-badgedetail [config]="config" [awaitPromises]="[assertionIdParam.loadedPromise]"></bg-badgedetail>`,
-	imports: [BgBadgeDetail],
+	template: `
+		<!-- ===== Verification banner (Wissam) =====
+		     The recipient's name was previously visible only as small breadcrumb text.
+		     This states the verification verdict up front and gives the award a moment. -->
+		@if (verifyState === 'notfound') {
+			<div class="page-padding oeb">
+				<div class="wsm-enter tw-mx-auto tw-my-10 tw-max-w-2xl tw-rounded-2xl tw-border-2 tw-border-solid tw-border-[#d6371a]/30 tw-bg-[#d6371a]/[0.04] tw-p-8 tw-text-center">
+					<svg class="tw-mx-auto tw-mb-4 tw-h-16 tw-w-16" viewBox="0 0 52 52" aria-hidden="true">
+						<circle class="wsm-ring" cx="26" cy="26" r="23" fill="none" stroke="#d6371a" stroke-width="2.5" />
+						<path class="wsm-mark" d="M18 18 L34 34 M34 18 L18 34" fill="none" stroke="#d6371a" stroke-width="3.5" stroke-linecap="round" />
+					</svg>
+					<h1 class="tw-text-2xl tw-font-extrabold tw-text-oebblack md:tw-text-3xl">
+						{{ 'Verify.notFoundTitle' | translate }}
+					</h1>
+					<p class="tw-mx-auto tw-mt-3 tw-max-w-lg tw-text-oebblack/70">
+						{{ 'Verify.notFoundBody' | translate }}
+					</p>
+					<a
+						class="tw-mt-6 tw-inline-block tw-rounded-full tw-bg-purple tw-px-6 tw-py-2.5 tw-text-sm tw-font-bold tw-text-white hover:tw-bg-buttonhover"
+						href="/catalog/badges"
+						>{{ 'Verify.browseBadges' | translate }}</a
+					>
+				</div>
+			</div>
+		} @else if (verifyState) {
+			<div class="page-padding oeb">
+				<div
+					class="wsm-enter tw-mt-6 tw-rounded-2xl tw-p-6 md:tw-p-8"
+					[class]="
+						verifyState === 'valid'
+							? 'tw-bg-gradient-to-br tw-from-[#0e9f6e]/10 tw-to-[#652673]/[0.06] tw-border tw-border-solid tw-border-[#0e9f6e]/25'
+							: 'tw-bg-[#d6371a]/[0.05] tw-border tw-border-solid tw-border-[#d6371a]/25'
+					"
+				>
+					<div class="tw-flex tw-flex-col tw-items-center tw-gap-4 sm:tw-flex-row sm:tw-items-center">
+						<svg class="wsm-seal tw-h-14 tw-w-14 tw-shrink-0 sm:tw-h-16 sm:tw-w-16" viewBox="0 0 52 52" aria-hidden="true">
+							<circle
+								class="wsm-ring"
+								cx="26"
+								cy="26"
+								r="23"
+								fill="none"
+								[attr.stroke]="verifyState === 'valid' ? '#0e9f6e' : '#d6371a'"
+								stroke-width="2.5"
+							/>
+							@if (verifyState === 'valid') {
+								<path class="wsm-mark" d="M15 27 l7.5 7.5 L38 19" fill="none" stroke="#0e9f6e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+							} @else {
+								<path class="wsm-mark" d="M18 18 L34 34 M34 18 L18 34" fill="none" stroke="#d6371a" stroke-width="3.5" stroke-linecap="round" />
+							}
+						</svg>
+
+						<div class="tw-text-center sm:tw-text-left">
+							<p
+								class="tw-text-[11px] tw-font-bold tw-uppercase tw-tracking-[0.14em]"
+								[class]="verifyState === 'valid' ? 'tw-text-[#0b7d56]' : 'tw-text-[#b02d15]'"
+							>
+								{{ (verifyState === 'valid' ? 'Verify.verified' : verifyState === 'revoked' ? 'Verify.revoked' : 'Verify.expired') | translate }}
+							</p>
+							<p class="tw-mt-1 tw-text-sm tw-text-oebblack/70">{{ 'Verify.awardedTo' | translate }}</p>
+							<h1 class="wsm-name tw-text-3xl tw-font-extrabold tw-leading-tight tw-text-purple md:tw-text-[2.75rem]">
+								{{ awardedToDisplayName || ('Badge.unknownRecipient' | translate) }}
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+
+		<bg-badgedetail [config]="config" [awaitPromises]="[assertionIdParam.loadedPromise]"></bg-badgedetail>
+	`,
+	styles: [
+		`
+			/* entrance: the award should feel like it lands, not just appear */
+			.wsm-enter {
+				animation: wsm-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+			}
+			@keyframes wsm-rise {
+				from {
+					opacity: 0;
+					transform: translateY(14px);
+				}
+				to {
+					opacity: 1;
+					transform: none;
+				}
+			}
+			/* seal: ring draws, then the mark strikes through it */
+			.wsm-ring {
+				stroke-dasharray: 145;
+				stroke-dashoffset: 145;
+				animation: wsm-draw 0.7s ease-out 0.1s forwards;
+			}
+			.wsm-mark {
+				stroke-dasharray: 60;
+				stroke-dashoffset: 60;
+				animation: wsm-draw 0.4s ease-out 0.6s forwards;
+			}
+			@keyframes wsm-draw {
+				to {
+					stroke-dashoffset: 0;
+				}
+			}
+			.wsm-seal {
+				animation: wsm-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+			}
+			@keyframes wsm-pop {
+				from {
+					transform: scale(0.82);
+				}
+				to {
+					transform: none;
+				}
+			}
+			.wsm-name {
+				animation: wsm-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+			}
+			/* respect the visitor's motion preference */
+			@media (prefers-reduced-motion: reduce) {
+				.wsm-enter,
+				.wsm-name,
+				.wsm-seal,
+				.wsm-ring,
+				.wsm-mark {
+					animation: none !important;
+					stroke-dashoffset: 0 !important;
+					opacity: 1 !important;
+					transform: none !important;
+				}
+			}
+		`,
+	],
+	imports: [BgBadgeDetail, TranslatePipe],
 })
 export class PublicBadgeAssertionComponent {
 	private injector = inject(Injector);
@@ -78,6 +210,9 @@ export class PublicBadgeAssertionComponent {
 	awardingIssuers: Issuer[] = null;
 
 	awardedToDisplayName: string;
+
+	/** Verification verdict shown in the banner. null while loading. */
+	verifyState: 'valid' | 'revoked' | 'expired' | 'notfound' | null = null;
 
 	config: PageConfig;
 
@@ -302,9 +437,21 @@ export class PublicBadgeAssertionComponent {
 				if (assertion['extensions:recipientProfile'] && assertion['extensions:recipientProfile'].name) {
 					this.awardedToDisplayName = assertion['extensions:recipientProfile'].name;
 				}
+
+				// verdict for the banner: revoked beats expired beats valid
+				const revoked = isOB2Assertion(assertion) && assertion.revoked;
+				const expiry = getAssertionExpiration(assertion);
+				const expired = expiry ? new Date(expiry).getTime() < Date.now() : false;
+				this.verifyState = revoked ? 'revoked' : expired ? 'expired' : 'valid';
+
 				return assertion;
 			} catch (err) {
+				// Previously this only logged and returned undefined, so an unknown or
+				// mistyped assertion id rendered a completely blank page. Now the
+				// template shows an explicit "could not be verified" state.
 				console.error('Failed to fetch assertion data', err);
+				this.verifyState = 'notfound';
+				return null;
 			}
 		});
 	}

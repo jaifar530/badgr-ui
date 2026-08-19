@@ -1614,5 +1614,14 @@
 		"civilIdDesc": "Authenticate using an Oman civil ID card reader",
 		"mobileId": "Mobile ID",
 		"mobileIdDesc": "Authenticate by scanning a QR code or notification"
+	},
+	"Verify": {
+		"verified": "Verified credential",
+		"revoked": "Revoked credential",
+		"expired": "Expired credential",
+		"awardedTo": "Awarded to",
+		"notFoundTitle": "We couldn't verify this credential",
+		"notFoundBody": "No credential matches this link. It may have been copied incompletely, or the credential may have been withdrawn by its issuer. Please check the link and try again.",
+		"browseBadges": "Browse badges"
 	}
 }

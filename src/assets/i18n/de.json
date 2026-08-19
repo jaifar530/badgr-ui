@@ -1657,5 +1657,14 @@
 		"civilIdDesc": "Authentifizierung mit einem omanischen Civil-ID-Kartenleser",
 		"mobileId": "Mobile ID",
 		"mobileIdDesc": "Authentifizierung per QR-Code oder Benachrichtigung"
+	},
+	"Verify": {
+		"verified": "Verifizierter Nachweis",
+		"revoked": "Widerrufener Nachweis",
+		"expired": "Abgelaufener Nachweis",
+		"awardedTo": "Verliehen an",
+		"notFoundTitle": "Dieser Nachweis konnte nicht verifiziert werden",
+		"notFoundBody": "Zu diesem Link existiert kein Nachweis. Möglicherweise wurde der Link unvollständig kopiert oder der Nachweis wurde zurückgezogen. Bitte prüfen Sie den Link.",
+		"browseBadges": "Badges ansehen"
 	}
 }
