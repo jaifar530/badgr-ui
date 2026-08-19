@@ -11,7 +11,7 @@ import { CmsPageComponent } from '~/common/components/cms/cms-page.component';
 export class AboutComponent {
 	translate = inject(TranslateService);
 
-	mailAddress = 'support@openbadges.education';
+	mailAddress = 'support@tazez.om';
 	mailBody = 'Interesse an Open Educational Badges';
 
 	/** Inserted by Angular inject() migration for backwards compatibility */
