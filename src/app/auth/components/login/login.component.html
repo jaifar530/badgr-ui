@@ -16,6 +16,8 @@
 					</p>
 				</div>
 
+				<!-- Two-column on desktop: login form | divider | THEQA. Stacks on mobile. -->
+				<div class="tw-flex tw-flex-col lg:tw-flex-row lg:tw-items-stretch lg:tw-gap-8 xl:tw-gap-12">
 				<div class="tw-relative oeb-max-form-width">
 					<div
 						class="tw-block tw-absolute tw-right-[15%] tw-top-[-35%] md:tw-right-[-15%] md:tw-top-[-10%] tw-z-0 tw-opacity-80"
@@ -131,7 +133,12 @@
 							</div>
 						</form>
 					}
-					<!-- ================= THEQA (Oman national authentication) =================
+				</div>
+
+				<!-- vertical divider (desktop only) -->
+				<div class="tw-hidden lg:tw-block tw-w-px tw-shrink-0 tw-bg-[#292663]/15" aria-hidden="true"></div>
+
+				<!-- ================= THEQA (Oman national authentication) =================
 					     Replaces the upstream "Mein Bildungsraum" button (Germany's federal
 					     education SSO), which was irrelevant here and hard-disabled upstream.
 					     UI ONLY - no OIDC wiring yet. The whole block is non-interactive and
@@ -139,28 +146,30 @@
 					     Brand colours sampled from the official THEQA assets: navy #292663,
 					     light blue #8BD7F8. THEQA offers exactly two methods: Civil ID + Mobile ID.
 					-->
-					<div class="tw-mt-8 md:tw-mt-12 tw-w-full">
+					<div class="tw-mt-8 lg:tw-mt-0 tw-w-full lg:tw-flex-1 lg:tw-max-w-[420px]">
 						<div
-							class="tw-relative tw-rounded-2xl tw-border tw-border-dashed tw-border-[#292663]/30 tw-bg-[#292663]/[0.03] tw-p-5 tw-select-none"
+							class="tw-h-full tw-rounded-2xl tw-border tw-border-dashed tw-border-[#292663]/30 tw-bg-[#292663]/[0.03] tw-p-5 tw-select-none"
 							aria-describedby="theqa-soon"
 						>
-							<span
-								id="theqa-soon"
-								class="tw-absolute tw-top-4 ltr:tw-right-4 rtl:tw-left-4 tw-rounded-full tw-bg-[#8BD7F8]/30 tw-px-3 tw-py-1 tw-text-[11px] tw-font-bold tw-uppercase tw-tracking-wide tw-text-[#292663]"
-							>
-								{{ 'Theqa.comingSoon' | translate }}
-							</span>
-
-							<div class="tw-flex tw-items-center tw-gap-3 tw-opacity-70">
+							<!-- header: logo chip and badge on one row (the badge used to be
+							     absolutely positioned and overlapped the logo on narrow columns) -->
+							<div class="tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-gap-3">
 								<span class="tw-inline-flex tw-items-center tw-rounded-lg tw-bg-[#292663] tw-px-3 tw-py-2">
 									<img src="assets/logos/theqa-logo.png" alt="THEQA" class="tw-h-5 tw-w-auto md:tw-h-6" />
 								</span>
-								<p class="tw-text-sm tw-text-oebblack md:tw-text-base">
-									{{ 'Theqa.subtitle' | translate }}
-								</p>
+								<span
+									id="theqa-soon"
+									class="tw-rounded-full tw-bg-[#8BD7F8]/40 tw-px-3 tw-py-1 tw-text-[11px] tw-font-bold tw-uppercase tw-tracking-wide tw-text-[#292663]"
+								>
+									{{ 'Theqa.comingSoon' | translate }}
+								</span>
 							</div>
 
-							<div class="tw-mt-4 tw-grid tw-grid-cols-1 tw-gap-3 sm:tw-grid-cols-2" aria-disabled="true">
+							<p class="tw-mt-3 tw-text-sm tw-text-oebblack md:tw-text-base">
+								{{ 'Theqa.subtitle' | translate }}
+							</p>
+
+							<div class="tw-mt-4 tw-grid tw-grid-cols-1 tw-gap-3" aria-disabled="true">
 								<button
 									type="button"
 									disabled
