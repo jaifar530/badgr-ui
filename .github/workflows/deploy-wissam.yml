@@ -43,7 +43,12 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H 212.24.97.111 >> ~/.ssh/known_hosts 2>/dev/null
+          # retry keyscan (transient DNS/network failures killed the first run)
+          for i in 1 2 3; do
+            ssh-keyscan -H 212.24.97.111 >> ~/.ssh/known_hosts 2>/dev/null && break
+            sleep 5
+          done
+          grep -q 212.24.97.111 ~/.ssh/known_hosts
 
       - name: Ship dist (previous kept as dist.old for rollback)
         run: |
