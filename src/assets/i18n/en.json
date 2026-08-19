@@ -461,18 +461,54 @@
 					"learningPaths": "Micro Degrees (Learning Paths)"
 				},
 				"months": {
-					"january": { "label": "January", "short": "JAN" },
-					"february": { "label": "February", "short": "FEB" },
-					"march": { "label": "March", "short": "MAR" },
-					"april": { "label": "April", "short": "APR" },
-					"may": { "label": "May", "short": "MAY" },
-					"june": { "label": "June", "short": "JUN" },
-					"july": { "label": "July", "short": "JUL" },
-					"august": { "label": "August", "short": "AUG" },
-					"september": { "label": "September", "short": "SEP" },
-					"october": { "label": "October", "short": "OCT" },
-					"november": { "label": "November", "short": "NOV" },
-					"december": { "label": "December", "short": "DEC" }
+					"january": {
+						"label": "January",
+						"short": "JAN"
+					},
+					"february": {
+						"label": "February",
+						"short": "FEB"
+					},
+					"march": {
+						"label": "March",
+						"short": "MAR"
+					},
+					"april": {
+						"label": "April",
+						"short": "APR"
+					},
+					"may": {
+						"label": "May",
+						"short": "MAY"
+					},
+					"june": {
+						"label": "June",
+						"short": "JUN"
+					},
+					"july": {
+						"label": "July",
+						"short": "JUL"
+					},
+					"august": {
+						"label": "August",
+						"short": "AUG"
+					},
+					"september": {
+						"label": "September",
+						"short": "SEP"
+					},
+					"october": {
+						"label": "October",
+						"short": "OCT"
+					},
+					"november": {
+						"label": "November",
+						"short": "NOV"
+					},
+					"december": {
+						"label": "December",
+						"short": "DEC"
+					}
 				}
 			},
 			"socialspace": {
@@ -1570,5 +1606,13 @@
 			"menuItemDisable": "Disable 2FA",
 			"disabledSuccess": "2FA has been disabled. A confirmation email has been sent to your address."
 		}
+	},
+	"Theqa": {
+		"comingSoon": "Coming soon",
+		"subtitle": "Sign in with THEQA, Oman's national authentication service.",
+		"civilId": "Civil ID Card",
+		"civilIdDesc": "Authenticate using an Oman civil ID card reader",
+		"mobileId": "Mobile ID",
+		"mobileIdDesc": "Authenticate by scanning a QR code or notification"
 	}
 }
