@@ -43,12 +43,10 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          # retry keyscan (transient DNS/network failures killed the first run)
-          for i in 1 2 3; do
-            ssh-keyscan -H 212.24.97.111 >> ~/.ssh/known_hosts 2>/dev/null && break
-            sleep 5
-          done
-          grep -q 212.24.97.111 ~/.ssh/known_hosts
+          # Host key PINNED (no runtime keyscan: the server's OpenSSH per-source
+          # penalties drop unauthenticated scans from CI ranges, and ssh-keyscan
+          # exits 0 even when it collects nothing).
+          echo "# 212.24.97.111:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.18" >> ~/.ssh/known_hosts
 
       - name: Ship dist (previous kept as dist.old for rollback)
         run: |
