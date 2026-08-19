@@ -31,7 +31,14 @@ export const routes: Routes = [
 		} as BadgrRouteData,
 	},
 	{
+		// LOCAL PATCH (Wissam): the start page is CMS-backed and no CMS is
+		// configured - a direct visit would hang on a spinner forever.
 		path: 'start',
+		redirectTo: '/auth/login',
+		pathMatch: 'full',
+	},
+	{
+		path: 'start-cms-disabled',
 		loadComponent: () => import('./components/start/start.component').then((m) => m.StartComponent),
 		data: {
 			publiclyAccessible: true,

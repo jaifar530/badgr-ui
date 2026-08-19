@@ -6,15 +6,15 @@ export const environment: BadgrEnvironment = {
 	enableErrorInterceptor: false,
 	config: {
 		api: {
-			baseUrl: 'https://api.openbadges.education',
+			baseUrl: 'https://api.wissam.om',
 		},
 		theme: {
-			welcomeMessage: 'Willkommen auf Open Educational Badges',
-			serviceName: 'Open Educational Badges',
+			welcomeMessage: 'Welcome to Wissam',
+			serviceName: 'Wissam',
 			showPoweredByBadgr: true,
 			logoImg: {
-				small: 'assets/logos/Logo-Oeb.png',
-				desktop: 'assets/logos/Logo-Oeb.png',
+				small: 'assets/logos/wissam-logo.svg',
+				desktop: 'assets/logos/wissam-logo.svg',
 			},
 			loadingImg: {
 				imageUrl:
@@ -22,20 +22,34 @@ export const environment: BadgrEnvironment = {
 			},
 			favicons: [
 				{
-					href: 'assets/icon/favicon.ico',
+					href: 'assets/icon/wissam-favicon.png',
 					rel: 'icon',
 				},
 			],
 			useColorNavbar: true,
-			imprintLink: 'page/impressum',
-			termsOfServiceLink: 'page/nutzungsbedingungen',
-			privacyPolicyLink: 'page/privacy-policy',
+			imprintLink: 'https://wissam.om',
+			termsOfServiceLink: 'https://wissam.om',
+			privacyPolicyLink: 'https://wissam.om',
 			showApiDocsLink: false,
 			cssCustomProps: {
-				'--color-interactive1': '#492E98',
-				'--color-interactive2': '#00729C',
-				'--color-interactive2alpha50': '#00729C80',
-				'--color-theme': '#00729C',
+				// Wissam brand palette (purple #652673 / orange #ff421e), applied at
+				// runtime by theme-setup.ts - the app's own theming mechanism, no CSS edits.
+				'--color-interactive1': '#652673',
+				'--color-interactive2': '#d6371a',
+				'--color-interactive2alpha50': '#d6371a80',
+				'--color-theme': '#ff421e',
+				'--color-purple': '#652673',
+				'--color-purple-50': '#f6f2f7',
+				'--color-purple-100': '#e6dce9',
+				'--color-purple-200': '#d1bed5',
+				'--color-purple-300': '#ba9dc0',
+				'--color-purple-400': '#a37dab',
+				'--color-purple-500': '#8c5c96',
+				'--color-purple-600': '#774084',
+				'--color-purple-700': '#652673',
+				'--color-purple-800': '#652673',
+				'--color-purple-900': '#592165',
+				'--color-purple-950': '#4c1c56',
 			},
 		},
 	},

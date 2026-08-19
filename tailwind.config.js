@@ -13,7 +13,7 @@ module.exports = {
 	prefix: 'tw-',
 	content: ['./src/**/*.{html,ts}', './components/**/*.{html,ts}'],
 	theme: {
-		fontFamily: { body: ['rubik', 'Open Sans', 'sans-serif'] },
+		fontFamily: { body: ['Tajawal', 'rubik', 'Open Sans', 'sans-serif'] },
 		container: {
 			center: true,
 			padding: '2rem',

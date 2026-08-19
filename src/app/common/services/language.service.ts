@@ -19,11 +19,9 @@ export class LanguageService {
 	setInitialAppLanguage() {
 		let language = window.localStorage.getItem('lang');
 		if (!language) {
-			if (navigator.language.toLocaleLowerCase().indexOf('de') == 0) {
-				language = 'de';
-			} else {
-				language = 'en';
-			}
+			// LOCAL PATCH (Wissam): always default to English regardless of the
+			// browser locale. German remains available via the DE toggle.
+			language = 'en';
 			window.localStorage.setItem('lang', language);
 		}
 		this.setLanguage(language);

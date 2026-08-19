@@ -8,12 +8,12 @@
 @tailwind utilities;
 
 html {
-	font-family: rubik;
+	font-family: 'Tajawal', rubik, sans-serif;  /* Wissam: Tajawal (latin+arabic) */
 	scrollbar-gutter: stable;
 }
 
 .oeb {
-	font-family: rubik;
+	font-family: 'Tajawal', rubik, sans-serif;  /* Wissam: Tajawal (latin+arabic) */
 }
 /* colors from mycelia */
 :root {

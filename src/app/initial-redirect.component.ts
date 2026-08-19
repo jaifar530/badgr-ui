@@ -25,7 +25,9 @@ export class InitialRedirectComponent {
 		// if (sessionService.isLoggedIn) {
 		// 	router.navigate(['/recipient/badges'], { replaceUrl: true });
 		// } else {
-		router.navigate(['/public/start'], { replaceUrl: true });
+		// LOCAL PATCH (Wissam): /public/start is a CMS page (slug 'homepage') and no
+		// CMS is configured, so it spins forever. Send visitors to login instead.
+		router.navigate(['/auth/login'], { replaceUrl: true });
 		// }
 	}
 }

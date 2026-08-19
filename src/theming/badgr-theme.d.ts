@@ -88,9 +88,9 @@ export interface BadgrTheme {
 	 * properties
 	 */
 	cssCustomProps?: {
-		'--color-interactive1'?: string;
-		'--color-interactive2'?: string;
-		'--color-interactive2alpha50'?: string;
-		'--color-theme'?: string;
+		// LOCAL PATCH (Wissam): theme-setup.ts iterates ALL keys and applies each to
+		// document.documentElement, so the runtime already supports any custom prop.
+		// The narrow literal type only blocked legitimate palette overrides (TS2353).
+		[prop: `--${string}`]: string | undefined;
 	};
 }
