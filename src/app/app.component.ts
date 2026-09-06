@@ -30,7 +30,7 @@ import { Issuer } from './issuer/models/issuer.model';
 import { IssuerManager } from './issuer/services/issuer-manager.service';
 import { QuotaManager } from './issuer/services/quota-manager.service';
 import { ExportPdfDialog } from './common/dialogs/export-pdf-dialog/export-pdf-dialog.component';
-import { LanguageService } from './common/services/language.service';
+import { LanguageService, dirFor } from './common/services/language.service';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { MenuItem } from './common/components/badge-detail/badge-detail.component.types';
 import { CmsApiMenu } from './common/model/cms-api.model';
@@ -323,6 +323,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 		this.translate.onLangChange.subscribe(() => {
 			this.document.documentElement.lang = this.translate.currentLang;
+			this.document.documentElement.dir = dirFor(this.translate.currentLang);
 		});
 
 		if (environment.networksEnabled) {

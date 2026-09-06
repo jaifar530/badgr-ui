@@ -76,7 +76,8 @@
 		"license": "License",
 		"language": {
 			"de": "German",
-			"en": "English"
+			"en": "English",
+			"ar": "Arabic"
 		},
 		"close": "Close",
 		"notification": "Notification",
@@ -404,6 +405,13 @@
 		"parentInstitutionInfo": "This institution will automatically become the first network member.",
 		"noEligibleInstitution": "You don't have any eligible institutions to create a network. An institution must have the network creation quota and you must be its owner or editor.",
 		"Dashboard": {
+			"competencyAreas": {
+				"itDigital": "IT & Digital",
+				"socialCompetencies": "Social Skills",
+				"languages": "Languages",
+				"crafts": "Crafts",
+				"management": "Management"
+			},
 			"kpi": {
 				"institutionsCount": "Institutions in Network",
 				"badgesCreated": "different Badges created",

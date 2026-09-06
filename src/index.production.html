@@ -1,16 +1,33 @@
 <!doctype html>
-<html lang="de">
+<html lang="en" dir="ltr">
 	<head>
+		<script>
+			/* Wissam: set lang+dir before first paint. Angular re-applies the same values
+			   in LanguageService; this exists so there is no flash of LTR chrome and so
+			   CDK Directionality (which reads documentElement.dir once, lazily) is right. */
+			(function () {
+				var DIR = { ar: "rtl", en: "ltr", de: "ltr" };
+				var l = null;
+				try {
+					var m = /[?&]lang=([a-zA-Z-]+)/.exec(location.search);
+					if (m) { l = m[1].toLowerCase(); localStorage.setItem("lang", l); }
+					else { l = (localStorage.getItem("lang") || "").toLowerCase(); }
+				} catch (e) { /* storage blocked: fall through to the default */ }
+				if (!DIR[l]) l = "en"; /* WISSAM-DEFAULT-LANG */
+				document.documentElement.lang = l;
+				document.documentElement.dir = DIR[l];
+			})();
+		</script>
 		<meta charset="utf-8" />
 		<title>Wissam — وسام</title>
 
 		<!-- Open Graph properties to improve SEO -->
-		<meta property="og:title" content="Open Educational Badges" />
+		<meta property="og:title" content="Wissam — وسام" />
 		<meta
 			property="og:description"
-			content="Unser Ziel ist es, ein Instrument zur standardisierten Dokumentation von Kompetenzen aufzubauen."
+			content="منصة وسام الوطنية للاعتمادات الرقمية — أوسمة موقَّعة تشفيريًا تصدرها المؤسسات ويتحقق منها أصحاب العمل في ثوانٍ."
 		/>
-		<meta property="og:image" content="https://openbadges.education/assets/logos/Logo-Square.png" />
+		<meta property="og:image" content="https://dashboard.wissam.om/assets/logos/Logo-Square.png" />
 
 		<base href="/" />
 

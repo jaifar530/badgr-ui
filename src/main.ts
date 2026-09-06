@@ -7,7 +7,7 @@ import { BadgrRouteReuseStrategy } from './app/common/util/route-reuse-strategy'
 import { AppConfigService } from './app/common/app-config.service';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
 import { initializeTheme } from './theming/theme-setup';
@@ -15,12 +15,16 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ROUTE_CONFIG } from './app/app.routes';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import localeAr from '@angular/common/locales/ar';
 import { uiTimestamp } from './environments/timestamp';
 import { IconsProvider } from '~/icons-provider';
 import { SessionService } from '~/common/services/session.service';
 import { AUTH_PROVIDER } from '~/common/services/authentication-service';
+import { LanguageService } from '~/common/services/language.service';
+import { LoggingMissingTranslationHandler } from '~/common/i18n/missing-translation.handler';
 
 registerLocaleData(localeDe);
+registerLocaleData(localeAr);
 
 // Store the initial window location to allow for future query param retrieval
 // as a workaround for
@@ -38,6 +42,13 @@ bootstrapApplication(AppComponent, {
 		importProvidersFrom(
 			BrowserModule,
 			TranslateModule.forRoot({
+				// Loaded alongside the active language, so a key missing from ar.json renders
+				// the English string instead of the raw key while the Arabic waves land.
+				defaultLanguage: 'en',
+				missingTranslationHandler: {
+					provide: MissingTranslationHandler,
+					useClass: LoggingMissingTranslationHandler,
+				},
 				loader: {
 					provide: TranslateLoader,
 					useFactory: (client) =>
@@ -48,6 +59,10 @@ bootstrapApplication(AppComponent, {
 		),
 		RecipientBadgeApiService,
 		{ provide: RouteReuseStrategy, useClass: BadgrRouteReuseStrategy },
+		// Resolves language + sets <html lang/dir>, and blocks first render until the
+		// catalogue is loaded — the ~480 translate.instant() calls that run in component
+		// constructors would otherwise race the async HTTP load and render raw keys.
+		provideAppInitializer(() => inject(LanguageService).initialize()),
 		provideAppInitializer(async () => {
 			const configService = inject(AppConfigService);
 			const configPromise = configService.initializeConfig();
