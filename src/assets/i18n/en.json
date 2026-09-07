@@ -822,24 +822,24 @@
 		"confirmedSubscription": "<span class='tw-font-bold tw-text-oebblack'>You have successfully confirmed your newsletter subscription.</span>",
 		"signup": "Newsletter registration",
 		"stayUpToDate": "Stay up to date",
-		"withOurNewsletter": "with our OEB newsletter",
-		"dontMissNews": "Don't want to miss out on the latest developments and updates relating to Open Educational Badges?",
+		"withOurNewsletter": "with our Wissam newsletter",
+		"dontMissNews": "Don't want to miss out on the latest developments and updates relating to Wissam?",
 		"thenSubscribe": "Then subscribe to our newsletter now:",
 		"fillRegistrationForm": "Fill out the registration form",
 		"confirmLink": "Click on the confirmation link in the email you receive",
-		"receiveNewsletter": "Receive the OEB newsletter"
+		"receiveNewsletter": "Receive the Wissam newsletter"
 	},
 	"TermsOfService": {
 		"newTerms": "New Terms of Service",
 		"iConfirm": "I have read the <a class='tw-underline tw-text-[#1400FF]' target='_blank' href='public/terms'>Terms of Service</a> and agree to them.",
 		"sendConfirmation": "Send confirmation",
-		"cantUseWithoutConfirmation": "Unfortunately, you cannot use Open Educational Badges without confirming the Terms of Service.",
+		"cantUseWithoutConfirmation": "Unfortunately, you cannot use Wissam without confirming the Terms of Service.",
 		"backToTerms": "Back to the Terms of Service"
 	},
 	"FAQ": {
 		"youHaveQuestions": "Do you have questions?",
 		"weHaveAnswers": "We have answers!",
-		"faqInfo": "On this page you will find answers to the most frequently asked questions about Open Educational Badges",
+		"faqInfo": "On this page you will find answers to the most frequently asked questions about Wissam",
 		"cantFindAnswer": "If you cannot find the answer you are looking for, please feel free to ",
 		"contactDirectly": "contact us directly"
 	},
@@ -987,7 +987,7 @@
 		"add": "Add",
 		"changePass": "Change password",
 		"setPass": "Set password",
-		"accountAccess": "Would you like to give another app access to your Open Educational Badges account, for example to distribute badges automatically?<br> Then register a Client ID and a Client Secret for your account here.",
+		"accountAccess": "Would you like to give another app access to your Wissam account, for example to distribute badges automatically?<br> Then register a Client ID and a Client Secret for your account here.",
 		"newCredentials": "Register new credentials",
 		"chooseName": "Choose a name",
 		"idAndSecret": "Generate Client ID and Secret",
@@ -1018,7 +1018,7 @@
 		"pleaseTryAgain": "Please try again.",
 		"passwordMinRequirements": "(At least 8 characters, including 1 uppercase letter, 1 number, and 1 special character)",
 		"createNewPassword": "Create new password",
-		"saveNewPassword": "Neues Passwort speichern",
+		"saveNewPassword": "Save new password",
 		"weIncreasedPasswordRequirements": "We have increased our password requirements.",
 		"pleaseRenewPassword": "Therefore, we kindly request that you update your password.",
 		"pleaseRenewPasswordInfo": "Takes only a moment and provides greater protection.",
@@ -1278,14 +1278,14 @@
 		"upgradeLine": "Upgrade to our <a class='tw-text-link tw-underline tw-uppercase' href='https://openbadges.education/page/produkte' target='_blank'>Enterprise plan</a> to use your institution dashboard.",
 		"buttonLabel": "Request upgrade",
 		"image": "assets/oeb/images/teasers/dashboard-teaser_de.png",
-		"imageCaption": "Example view of an OEB dashboard."
+		"imageCaption": "Example view of a Wissam dashboard."
 	},
 	"PDFEditorTeaser": {
 		"heading": "PDF Editor",
 		"body": "With every badge, a PDF certificate in the OEB design is automatically sent to your learners. With the PDF Editor you can upload <strong>personalized backgrounds in your own design</strong> that can then be selected when <strong>creating or editing badges</strong>.",
 		"upgradeLine": "Upgrade to our <a class='tw-text-link tw-underline' href='/page/pricing' target='_blank'>PRO plan</a> to use the PDF Editor.",
 		"buttonLabel": "Request upgrade",
-		"defaultCaption": "Badge PDF in the OEB design.",
+		"defaultCaption": "Badge PDF in the Wissam design.",
 		"customCaption": "Badge info on a personalized PDF background (scalable).",
 		"defaultImage": "assets/oeb/images/teasers/vorschau-oeb-pdf_en.png",
 		"customImage": "assets/oeb/images/teasers/vorschau-individuelles-pdf_en.png"
