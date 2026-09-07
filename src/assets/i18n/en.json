@@ -356,8 +356,8 @@
 		"rolesAndRights": "<span class='tw-text-link tw-underline'>Roles and rights</span> are transferred: The invitation email is sent to the owners of the institutions. <span class='tw-font-bold'>They will have corresponding rights within the network, such as creating network badges and adding additional partner organizations</span>.",
 		"confirmInvitation": "Confirm invitation",
 		"networksHeadline": "All networks at a glance",
-		"networkRegistered": "network is registered on OEB",
-		"networksRegistered": "networks are registered on OEB",
+		"networkRegistered": "network is registered on Wissam",
+		"networksRegistered": "networks are registered on Wissam",
 		"noInstitutionAddedYet": "You have not yet added any institutions to your network.",
 		"addInstitutionToIssue": "The network itself does not award badges. Add institutions to your network to award badges.",
 		"emptyDashboard": {
@@ -1291,7 +1291,7 @@
 		"customImage": "assets/oeb/images/teasers/vorschau-individuelles-pdf_en.png"
 	},
 	"Dashboard": {
-		"title": "OEB Dashboard",
+		"title": "Wissam Dashboard",
 		"description": "Overview of competencies, badges and educational offerings in your region",
 		"noDataAvailable": "No data available",
 		"Stats": {
@@ -1315,7 +1315,7 @@
 		},
 		"Institutions": {
 			"title": "Social Area",
-			"description": "All institutions using Open Educational Badges in your region",
+			"description": "All institutions using Wissam in your region",
 			"total": "Total participating institutions",
 			"newLastMonth": "New institutions last month",
 			"newInstitutions": "New Institutions",

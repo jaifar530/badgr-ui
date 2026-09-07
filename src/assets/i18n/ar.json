@@ -335,6 +335,207 @@
 		"catalogAllLoaded": "حُمِّلت جميع المؤسسات المطابقة لمعايير بحثك.",
 		"badgeCount": "عدد الأوسمة"
 	},
+	"Network": {
+		"networksNav": "الشبكات أ–ي",
+		"noIssuer": "أنشئ مؤسسة أولًا.",
+		"noIssuerInNetwork": "<span class='tw-font-semibold'>لا توجد أي من مؤسساتك</span> ضمن أعضاء أي شبكة حاليًا.",
+		"networkLogoOnBadge": "يظهر شعار الشبكة أيضًا على صور الأوسمة المعنية.",
+		"networkDashboard": "يمكن للشبكات استخدام الأوسمة بشكل تشاركي، وإنشاء مسارات تعليمية مشتركة، والاطلاع على رؤى بيانية عابرة للمؤسسات عبر لوحة معلومات الشبكة.",
+		"canBeInvitedToExisting": "يمكن للشبكات القائمة أن <span class='tw-font-semibold'>تدعوك</span> للانضمام إليها.",
+		"upgradeToUse": "قم بالترقية إلى باقة الشبكات لتتمكن من <span class='tw-font-semibold'>إنشاء</span> شبكتك الخاصة.",
+		"upgradeToUseNew": "قم بالترقية إلى باقة الشبكات لتتمكن من <span class='tw-font-semibold'>إنشاء</span> شبكتك الجديدة.",
+		"requestUpgrade": "طلب ترقية الشبكة",
+		"youCanAddInstitutions": "يمكنك إنشاء شبكتك الخاصة وإضافة المؤسسات الشريكة إليها:",
+		"create": "إنشاء شبكة",
+		"name": "اسم الشبكة",
+		"addPartnerNext": "يمكنك إضافة المؤسسات الشريكة في الخطوة التالية.",
+		"welcomeDashboard": "مرحبًا بك في لوحة معلومات الشبكة",
+		"inviteInstitutions": "دعوة مؤسسات إلى الشبكة",
+		"shortInviteInstitutions": "دعوة مؤسسات",
+		"addInstitutions": "إضافة مؤسسات",
+		"rolesAndRights": "تُنقل <span class='tw-text-link tw-underline'>الأدوار والصلاحيات</span>: تُرسل رسالة الدعوة إلى مالكي المؤسسات. <span class='tw-font-bold'>وستكون لهم صلاحيات مقابلة داخل الشبكة، مثل إنشاء أوسمة الشبكة وإضافة جهات شريكة أخرى</span>.",
+		"confirmInvitation": "تأكيد الدعوة",
+		"networksHeadline": "جميع الشبكات في لمحة",
+		"networkRegistered": "شبكة مسجَّلة في وسام",
+		"networksRegistered": "شبكات مسجَّلة في وسام",
+		"noInstitutionAddedYet": "لم تُضف أي مؤسسات إلى شبكتك بعد.",
+		"addInstitutionToIssue": "الشبكة نفسها لا تمنح الأوسمة. أضف مؤسسات إلى شبكتك لتتمكن من منح الأوسمة.",
+		"emptyDashboard": {
+			"title": "لا توجد إحصاءات بعد",
+			"description": "أضف مؤسسات إلى شبكتك لعرض الإحصاءات والتحليلات."
+		},
+		"noAccessDashboard": {
+			"title": "لا صلاحية للوصول إلى لوحة المعلومات",
+			"description": "ليست لديك صلاحية عرض لوحة المعلومات. يرجى التواصل مع مسؤول الشبكة."
+		},
+		"partnerIssuers": "الشركاء",
+		"notifiedIssuerOwners": "أبلغنا مالكي المؤسسات عبر البريد الإلكتروني.",
+		"visibleAfterConfirmation": "بمجرد تأكيدهم للدعوة سيظهرون في صفحة الشركاء.",
+		"resendInvitation": "إعادة إرسال الدعوة",
+		"invitedOn": "دُعيت في",
+		"yourRole": "دورك: {{role}}",
+		"role": {
+			"owner": "مالك",
+			"editor": "محرر",
+			"staff": "عضو",
+			"creator": "منشئ / مالك"
+		},
+		"confirmNetworkInvitation": "أكّد <span class='tw-font-bold'>دعوة الشبكة من {{networkName}}</span> لمؤسستك <span class='tw-italic'>{{issuerName}}</span> بالضغط على الزر:",
+		"partnerSince": "شريك في الشبكة منذ",
+		"partner": "أعضاء الشبكة",
+		"alreadyConfirmed": "قبل عضو آخر من <span class='tw-italic'> {{issuerName}} دعوة الشبكة من <span class='tw-font-bold'> {{networkName}}</span> بالفعل.",
+		"view": "عرض الشبكة",
+		"createBadge": "إنشاء وسام للشبكة",
+		"createLp": "إنشاء مسار تعليمي للشبكة",
+		"noLpsYet": "لا توجد مسارات تعليمية للشبكة بعد.",
+		"awardBadgeIssuer": "لأي من <span class='tw-font-bold'>مؤسساتك</span> ينبغي منح الوسام؟",
+		"networkBadges": "أوسمة الشبكة",
+		"noPartnerBadgesYet": "لم تُتِح أي مؤسسة شريكة وسامًا للشبكة حتى الآن.",
+		"createdByNetwork": "أُنشئ بواسطة الشبكة",
+		"partOfNetwork": "جزء من الشبكة",
+		"noBadgesYet": "لم تُنشئ شبكة <span class='tw-font-semibold'>{{network}}</span> أي أوسمة بعد.",
+		"sharedBy": "شاركها",
+		"sharedOn": "شُوركت في",
+		"website": "موقع الشبكة الإلكتروني",
+		"createLpInfo": "لإنشاء <span class='tw-font-bold'>مسار تعليمي للشبكة</span>، يجب إنشاء وسامين على الأقل في الشبكة أو اعتمادهما لها من المؤسسات الشريكة.",
+		"pendingInvites": "دعوات لم تُؤكَّد بعد",
+		"edit": "تعديل الشبكة",
+		"parentInstitution": "المؤسسة الأم للشبكة",
+		"selectInstitution": "اختر مؤسسة",
+		"parentInstitutionInfo": "ستصبح هذه المؤسسة تلقائيًا أول عضو في الشبكة.",
+		"noEligibleInstitution": "لا توجد لديك مؤسسات مؤهلة لإنشاء شبكة. يجب أن تمتلك المؤسسة حصة إنشاء الشبكات وأن تكون أنت مالكها أو محررها.",
+		"Dashboard": {
+			"competencyAreas": {
+				"itDigital": "تقنية المعلومات والرقمنة",
+				"socialCompetencies": "المهارات الاجتماعية",
+				"languages": "اللغات",
+				"crafts": "الحِرَف",
+				"management": "الإدارة"
+			},
+			"kpi": {
+				"institutionsCount": "المؤسسات في الشبكة",
+				"badgesCreated": "وسامًا مختلفًا أُنشئ",
+				"badgesAwarded": "إجمالي الأوسمة الممنوحة",
+				"participationBadges": "أوسمة المشاركة",
+				"competencyBadges": "أوسمة الكفاية",
+				"competencyHours": "إجمالي ساعات الكفايات المعزَّزة",
+				"learnersCount": "متعلمًا حصلوا على أوسمة",
+				"badgesPerMonth": "متوسط الأوسمة الممنوحة شهريًا",
+				"learnersWithPaths": "متعلمًا أتموا مسارات تعليمية",
+				"learnersWithNetworkPaths": "متعلمًا أتموا مسارات الشبكة"
+			},
+			"unit": {
+				"badges": "أوسمة",
+				"hours": "ساعات",
+				"persons": "أشخاص"
+			},
+			"trend": {
+				"thisMonth": "هذا الشهر"
+			},
+			"recentActivity": {
+				"title": "الأنشطة الأخيرة",
+				"date": "التاريخ",
+				"badge": "الوسام",
+				"awardedBy": "مُنح بواسطة",
+				"recipients": "الحاصلون"
+			},
+			"competencyTracking": {
+				"title": "تتبُّع الكفايات"
+			},
+			"badgeAnalysis": {
+				"title": "تحليل الأوسمة",
+				"tabs": {
+					"topCompetencyAreas": "أبرز مجالات الكفايات",
+					"topIndividualCompetencies": "أبرز الكفايات الفردية",
+					"regions": "المناطق"
+				},
+				"deliveryMethod": {
+					"online": "عن بُعد",
+					"inPerson": "حضوريًا"
+				},
+				"regions": {
+					"other": "أخرى"
+				}
+			},
+			"badgeDistribution": {
+				"title": "توزيع الأوسمة"
+			},
+			"badgeTimeline": {
+				"title": "الخط الزمني للأوسمة",
+				"filter": {
+					"allTypes": "جميع الأنواع",
+					"competencyBadges": "أوسمة الكفاية",
+					"participationBadges": "أوسمة المشاركة",
+					"learningPaths": "الشهادات المصغَّرة (المسارات التعليمية)"
+				},
+				"months": {
+					"january": {
+						"label": "يناير",
+						"short": "ينا"
+					},
+					"february": {
+						"label": "فبراير",
+						"short": "فبر"
+					},
+					"march": {
+						"label": "مارس",
+						"short": "مار"
+					},
+					"april": {
+						"label": "أبريل",
+						"short": "أبر"
+					},
+					"may": {
+						"label": "مايو",
+						"short": "ماي"
+					},
+					"june": {
+						"label": "يونيو",
+						"short": "يون"
+					},
+					"july": {
+						"label": "يوليو",
+						"short": "يول"
+					},
+					"august": {
+						"label": "أغسطس",
+						"short": "أغس"
+					},
+					"september": {
+						"label": "سبتمبر",
+						"short": "سبت"
+					},
+					"october": {
+						"label": "أكتوبر",
+						"short": "أكت"
+					},
+					"november": {
+						"label": "نوفمبر",
+						"short": "نوف"
+					},
+					"december": {
+						"label": "ديسمبر",
+						"short": "ديس"
+					}
+				}
+			},
+			"socialspace": {
+				"tabTitle": "النطاق المجتمعي",
+				"totalInstitutions": "المؤسسات في الشبكة",
+				"coveredRegions": "المواقع المشمولة",
+				"allInstitutions": "جميع المؤسسات",
+				"noInstitutions": "لم يُعثر على مؤسسات",
+				"learnersInInstitutionsFromCity": "المتعلمون في مؤسسات من {{city}}",
+				"table": {
+					"institution": "المؤسسة",
+					"city": "المدينة",
+					"badges": "الأوسمة",
+					"users": "المتعلمون",
+					"joined": "تاريخ الانضمام"
+				}
+			}
+		}
+	},
 	"Badge": {
 		"groupBy": "التجميع حسب",
 		"framesMeaning": "ماذا تعني الإطارات والألوان؟",
@@ -1088,6 +1289,185 @@
 		"customCaption": "بيانات الوسام على خلفية PDF مخصصة (قابلة للتحجيم).",
 		"defaultImage": "assets/oeb/images/teasers/vorschau-oeb-pdf_en.png",
 		"customImage": "assets/oeb/images/teasers/vorschau-individuelles-pdf_en.png"
+	},
+	"Dashboard": {
+		"title": "لوحة معلومات وسام",
+		"description": "نظرة عامة على الكفايات والأوسمة والبرامج التعليمية في منطقتك",
+		"noDataAvailable": "لا توجد بيانات متاحة",
+		"Stats": {
+			"badges": "الأوسمة",
+			"competencyHours": "ساعات الكفايات",
+			"institutions": "المؤسسات",
+			"learners": "المتعلمون"
+		},
+		"Overview": {
+			"loading": "جارٍ تحميل لوحة المعلومات...",
+			"error": {
+				"title": "تعذَّر تحميل لوحة المعلومات",
+				"retry": "إعادة المحاولة"
+			}
+		},
+		"Competencies": {
+			"totalHours": "إجمالي ساعات الكفايات",
+			"totalHoursTooltip": "إجمالي عدد ساعات الكفايات المسجَّلة في جميع الأوسمة",
+			"totalCompetencies": "إجمالي الكفايات المعزَّزة",
+			"totalCompetenciesTooltip": "إجمالي عدد الكفايات المتناولة في جميع الأوسمة"
+		},
+		"Institutions": {
+			"title": "النطاق المجتمعي",
+			"description": "جميع المؤسسات التي تستخدم وسام في منطقتك",
+			"total": "إجمالي المؤسسات المشاركة",
+			"newLastMonth": "مؤسسات جديدة الشهر الماضي",
+			"newInstitutions": "مؤسسات جديدة",
+			"loading": "جارٍ تحميل المؤسسات...",
+			"allInstitutions": "جميع المؤسسات",
+			"showing": "المعروض",
+			"institutions": "مؤسسات",
+			"new": "جديد",
+			"badges": "الأوسمة",
+			"users": "المستخدمون",
+			"joined": "انضمت في",
+			"noInstitutions": "لم يُعثر على مؤسسات",
+			"coveredRegions": "المناطق الفرعية المشمولة"
+		},
+		"Learners": {
+			"totalLearnersLabel": "المتعلمون الحاصلون على أوسمة",
+			"residenceDistribution": "مكان إقامة المتعلمين",
+			"genderDistribution": "التوزيع حسب الجنس",
+			"learners": "المتعلمون",
+			"otherResidences": "أماكن إقامة أخرى"
+		},
+		"kpi": {
+			"institutions": "المؤسسات المشاركة",
+			"hoursPerCompetency": "متوسط ساعات الكفاية لكل كفاية",
+			"zipCodeDistribution": "التوزيع حسب الرمز البريدي"
+		},
+		"unit": {
+			"badges": "أوسمة",
+			"learners": "متعلمون",
+			"hours": "ساعات",
+			"zipCodeAreas": "مناطق الرموز البريدية"
+		},
+		"tooltip": {
+			"zipCodeDistribution": "توزيع المتعلمين حسب الرمز البريدي"
+		},
+		"zipCodeDetail": {
+			"badges": "الأوسمة",
+			"totalBadges": "الأوسمة الممنوحة",
+			"institutions": "المؤسسات في {{city}}",
+			"totalCompetencyHours": "ساعات الكفايات المعزَّزة",
+			"competencyAnalysis": "تحليل الكفايات",
+			"viewCompetencyAnalysis": "عرض تحليل الكفايات",
+			"learnerAnalysis": "تحليل المتعلمين",
+			"viewLearnerAnalysis": "عرض تحليل المتعلمين",
+			"regionalAnalysis": "التحليل الإقليمي",
+			"participation": "مشاركة",
+			"competency": "كفاية",
+			"learningPath": "مسار تعليمي",
+			"badgesCount": "الأوسمة",
+			"topInstitutions": "أبرز المؤسسات",
+			"genderDistribution": "التوزيع حسب الجنس",
+			"male": "ذكر",
+			"female": "أنثى",
+			"noAnswer": "دون إجابة",
+			"participationBadges": "أوسمة المشاركة",
+			"competencyBadges": "أوسمة الكفاية",
+			"learningPathBadges": "أوسمة المسارات التعليمية",
+			"learnerResidence": {
+				"title": "مكان إقامة المتعلمين",
+				"otherResidences": "أماكن إقامة أخرى",
+				"learners": "المتعلمون"
+			},
+			"strengthenedCompetencies": "أكثر الكفايات الفردية تعزيزًا"
+		},
+		"action": {
+			"clickForDetails": "اضغط للتفاصيل",
+			"clickLocationForDetails": "اضغط على المواقع لعرض مؤشرات تفصيلية",
+			"showDetailsFor": "عرض تفاصيل"
+		},
+		"legend": {
+			"low": "منخفض",
+			"high": "مرتفع"
+		},
+		"zipCodeOverview": {
+			"widgetTitle": "التوزيع حسب الرمز البريدي",
+			"zipCode": "الرمز البريدي",
+			"learnerCount": "عدد المتعلمين",
+			"loading": "جارٍ تحميل إحصاءات الرموز البريدية...",
+			"noData": "لا تتوفر إحصاءات للرموز البريدية"
+		},
+		"topCompetencyAreas": "أبرز مجالات الكفايات",
+		"top3AwardedBadges": "أكثر 3 أوسمة مُنحت",
+		"institutionsRanking": "ترتيب المؤسسات",
+		"mostStrengthenedCompetencies": "أكثر الكفايات الفردية تعزيزًا",
+		"competencyDetail": {
+			"subtitle": "تفاصيل الكفاية الفردية",
+			"hours": "ساعات الكفايات المعزَّزة",
+			"badges": "الأوسمة الممنوحة",
+			"users": "المتعلمون الحاصلون على أوسمة",
+			"institutions": "المؤسسات التي منحت أوسمة",
+			"institutionsTitle": "المؤسسات التي تقدّم هذه الكفاية",
+			"table": {
+				"institution": "المؤسسة",
+				"badges": "الأوسمة",
+				"users": "المتعلمون"
+			}
+		},
+		"competencyAreaDetail": {
+			"subtitle": "تفاصيل مجال الكفايات",
+			"hours": "ساعات الكفايات المعزَّزة",
+			"badges": "الأوسمة الممنوحة",
+			"users": "المتعلمون الحاصلون على أوسمة",
+			"institutions": "المؤسسات التي منحت أوسمة",
+			"topCompetenciesTitle": "أبرز الكفايات الفردية في هذا المجال",
+			"institutionsTitle": "المؤسسات التي تقدّم كفايات في هذا المجال",
+			"table": {
+				"institution": "المؤسسة",
+				"badges": "الأوسمة",
+				"users": "المتعلمون"
+			}
+		},
+		"competenciesByGender": "الكفايات حسب الجنس",
+		"genderAssignmentInfo": "يستند تصنيف جنس المتعلمين إلى الأسماء الأولى، ولذلك يتعذَّر تحديد الأشخاص من غير الفئتين. وعند تعذُّر التصنيف يُوسم ذلك بأنه «دون تحديد».",
+		"competenciesLastMonth": "الكفايات المُدرَّسة الشهر الماضي",
+		"badges": "الأوسمة",
+		"badgesTooltip": "{{count}} أوسمة",
+		"pageTitle": {
+			"competencyTracking": "تتبُّع الكفايات - {{network}}"
+		},
+		"deliveryMethod": "طريقة التقديم",
+		"deliveryMethodBadges": "أوسمة طريقة التقديم",
+		"total": "الإجمالي",
+		"badgesAwarded": "الأوسمة الممنوحة",
+		"badgeDistributionByType": "الأوسمة الممنوحة حسب النوع",
+		"badgeDistributionByTags": "الأوسمة الممنوحة حسب الوسم",
+		"tags": {
+			"others": "أخرى",
+			"notSpecified": "غير محدد"
+		},
+		"badgesAwardedInYear": "الأوسمة الممنوحة خلال السنة",
+		"allMonths": "جميع الأشهر",
+		"zipCode": "الرمز البريدي",
+		"badge": "وسام",
+		"badgeDensity": "كثافة الأوسمة",
+		"awardedBadgeDensity": "الأوسمة الممنوحة لكل 1,000 نسمة",
+		"badgesPer1000Residents": "أوسمة لكل 1,000 نسمة",
+		"vsLastYear": "مقارنةً بالعام الماضي",
+		"badgeDensityExplanation": "تُظهر كثافة الأوسمة عدد الأوسمة الممنوحة لكل 1,000 نسمة في المنطقة.",
+		"badgesAwardedLastMonth": "الأوسمة الممنوحة الشهر الماضي",
+		"genderDetail": {
+			"competencyAnalysis": "تحليل الكفايات حسب الجنس",
+			"competencyAnalysisDescription": "نظرة تفصيلية على مجالات الكفايات والكفايات الفردية وأبرز الأوسمة",
+			"topCompetencyAreas": "أبرز مجالات الكفايات",
+			"topIndividualCompetencies": "أبرز الكفايات الفردية",
+			"topBadges": "أبرز الأوسمة"
+		},
+		"residenceDetail": {
+			"competencyAnalysis": "تحليل الكفايات حسب مكان الإقامة",
+			"competencyAnalysisDescription": "نظرة تفصيلية على مجالات الكفايات والكفايات الفردية لهذه المنطقة",
+			"totalLearners": "إجمالي المتعلمين",
+			"noCompetencyData": "لا تتوفر بيانات كفايات"
+		}
 	},
 	"Quotas": {
 		"QuotasMenuItem": "الباقة والاستخدام",
