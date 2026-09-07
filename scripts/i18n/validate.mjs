@@ -15,7 +15,7 @@ const EN = 'src/assets/i18n/en.json';
 const AR = 'src/assets/i18n/ar.json';
 
 /** Namespaces whose Arabic is complete and must stay complete. Grow this per wave. */
-const SHIPPED = ['General', 'NavItems', 'Login', 'Theqa', 'Verify', 'Signup', 'Captcha', 'Welcome', 'Start', 'BadgeFilter', 'RequestBadge', 'Badge', 'RecBadge'];
+const SHIPPED = ['General', 'NavItems', 'Login', 'Theqa', 'Verify', 'Signup', 'Captcha', 'Welcome', 'Start', 'BadgeFilter', 'RequestBadge', 'Badge', 'RecBadge', 'Issuer', 'CreateBadge', 'EditBadge', 'Legend', 'ErrorDialog', 'NounProject', 'OEBComponents', 'IssueQr'];
 
 /** Keys whose Arabic is legitimately identical to English (brand names, codes). */
 const SAME_AS_EN_OK = new Set(['Login.loginBildungsraum']);
