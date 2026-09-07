@@ -21,7 +21,7 @@ $z-index-highest: 5;
 // Fonts & Typography
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: normal;
 	font-weight: bold;
 	src:
@@ -30,7 +30,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: italic;
 	font-weight: bold;
 	src:
@@ -39,7 +39,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: italic;
 	font-weight: normal;
 	src:
@@ -48,7 +48,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: normal;
 	font-weight: 300;
 	src:
@@ -57,7 +57,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'open_sanslight_italic';
+	font-family: 'open_sanslight_italic', 'Tajawal';
 	font-style: italic;
 	font-weight: 300;
 	src:
@@ -66,7 +66,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: normal;
 	font-weight: normal;
 	src:
@@ -75,7 +75,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	src:
 		url('#{$base-path}fonts/opensans-semibold-webfont.woff2') format('woff2'),
 		url('#{$base-path}fonts/opensans-semibold-webfont.woff') format('woff');
@@ -84,7 +84,7 @@ $z-index-highest: 5;
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Tajawal';
 	font-style: italic;
 	font-weight: 600;
 	src:
@@ -92,7 +92,7 @@ $z-index-highest: 5;
 		url('#{$base-path}fonts/opensans-semibolditalic-webfont.woff') format('woff');
 }
 
-$font-family: 'Open Sans', sans-serif;
+$font-family: 'Open Sans', sans-serif, 'Tajawal';
 
 $font-size-small2: 12px;
 $font-size-small1: 14px;

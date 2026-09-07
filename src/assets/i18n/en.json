@@ -753,8 +753,8 @@
 		"createAccountFor": "Create account for",
 		"weCreatedYourAccount": "We have created your account and sent you a verification email.",
 		"success_verify_email_heading": "Verify your email address",
-		"success_verify_email_desc": "Please check your inbox and <span class='tw-text-oebblack tw-font-bold'>click on “Confirm my account” in the verification email</span> to activate your OEB account.",
-		"success_verify_email_help": "If you do not receive the email within a few minutes, check your spam folder. <br> If you still cannot find the email, <a class='tw-underline tw-text-[#1400FF]' href='mailto:info@openbadges.education'>write to us</a>.",
+		"success_verify_email_desc": "Please check your inbox and <span class='tw-text-oebblack tw-font-bold'>click on “Confirm my account” in the verification email</span> to activate your Wissam account.",
+		"success_verify_email_help": "If you do not receive the email within a few minutes, check your spam folder. <br> If you still cannot find the email, <a class='tw-underline tw-text-[#1400FF]' href='mailto:support@tazez.om'>write to us</a>.",
 		"resendEmail": "Resend verification email",
 		"emailAlreadyConfirmed": "Your email address has already been confirmed. You can log in now.",
 		"reachedResendEmailLimit": "You have reached the limit for resending confirmation emails. Check your inbox for an existing message or try again after 5 minutes.",
@@ -772,8 +772,8 @@
 		"ageConfirm": "I confirm that I am at least 16 years old at the time of registration or that I have the consent of my legal guardians for registration on this platform.",
 		"newsletterEmail": "We have also sent you an email to confirm your newsletter subscription.",
 		"confirmNewsletter": "Click on <span class ='tw-font-bold'> “Confirm newsletter subscription” </span> in the newsletter email <br> to complete the newsletter registration.",
-		"newsletterEmailNotReceived": "You did not receive a newsletter email? Please submit your data via <br> our <a class='tw-underline tw-text-purple' href='public/about/newsletter'>newsletter registration form</a> or <a class='tw-underline tw-text-purple' target='_blank' href='mailto:info@openbadges.education'>write to us.</a>",
-		"updatesOptInText": "<span class='tw-text-oebblack tw-font-bold'>Yes</span>, I would like to stay up to date and subscribe to the OEB newsletter.",
+		"newsletterEmailNotReceived": "You did not receive a newsletter email? Please submit your data via <br> our <a class='tw-underline tw-text-purple' href='public/about/newsletter'>newsletter registration form</a> or <a class='tw-underline tw-text-purple' target='_blank' href='mailto:support@tazez.om'>write to us.</a>",
+		"updatesOptInText": "<span class='tw-text-oebblack tw-font-bold'>Yes</span>, I would like to stay up to date and subscribe to the Wissam newsletter.",
 		"signingUp": "Signing up..."
 	},
 	"Captcha": {
