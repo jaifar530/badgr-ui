@@ -50,7 +50,7 @@ jobs:
           S=$(grep -c documentElement dist/index.html || true)
           # The mirrored legacy stylesheet must reach the bundle.
           # The CSS minifier strips the attribute quotes: dir="rtl" ships as dir=rtl.
-          R=$(cat dist/styles-*.css | grep -o "dir=["']\?rtl" | wc -l)
+          R=$(cat dist/styles-*.css | grep -oE 'dir=.?rtl' | wc -l)
           echo "palette=$P DE=$D umami=$U tajawal=$T ar=$A html-dir=$H dir-script=$S rtl-css=$R"
           [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ] && [ "$A" -gt 0 ] && [ "$H" -gt 0 ] && [ "$S" -gt 0 ] && [ "$R" -gt 0 ]
 
