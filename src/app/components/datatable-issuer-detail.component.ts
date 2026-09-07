@@ -65,20 +65,20 @@ import { HlmNumberedPagination } from '@spartan-ng/helm/pagination';
 							hlm
 							size="sm"
 							name="lucideSearch"
-							class="tw-absolute tw-left-3 tw-top-1/2 tw-transform tw--translate-y-1/2 tw-text-purple"
+							class="tw-absolute tw-start-3 tw-top-1/2 tw-transform tw--translate-y-1/2 tw-text-purple"
 						/>
 						<input
 							type="text"
 							placeholder="{{ 'General.searchByNameOrEmail' | translate }}"
 							[value]="searchValue()"
 							(input)="onSearchChange($event)"
-							class="tw-w-full tw-pl-10 tw-pr-4 tw-py-2 tw-border-solid tw-border-2 tw-border-purple tw-rounded-lg tw-text-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-900 focus:tw-border-transparent"
+							class="tw-w-full tw-ps-10 tw-pe-4 tw-py-2 tw-border-solid tw-border-2 tw-border-purple tw-rounded-lg tw-text-sm focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-900 focus:tw-border-transparent"
 							[disabled]="awardInProgress()"
 						/>
 						@if (searchValue()) {
 							<button
 								(click)="clearSearch()"
-								class="tw-absolute tw-right-3 tw-top-1/2 tw-transform tw--translate-y-1/2 tw-text-gray-400 hover:tw-text-gray-600"
+								class="tw-absolute tw-end-3 tw-top-1/2 tw-transform tw--translate-y-1/2 tw-text-gray-400 hover:tw-text-gray-600"
 							>
 								<ng-icon hlm size="sm" name="lucideX" />
 							</button>

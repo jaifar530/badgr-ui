@@ -15,6 +15,6 @@ export class HlmCommandInputWrapper {
 	protected _computedClass = computed(() =>
 		// I removed:  [&_hlm-icon]:tw-h-5 [&_hlm-icon]:tw-w-5
 		// The icon size can be set through the size attribute on hlmIcon
-		hlm('tw-flex tw-space-x-2 tw-items-center tw-border-b tw-border-border tw-px-3', this.userClass()),
+		hlm('tw-flex tw-gap-2 tw-items-center tw-border-b tw-border-border tw-px-3', this.userClass()),
 	);
 }

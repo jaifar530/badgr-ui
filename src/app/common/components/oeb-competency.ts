@@ -30,9 +30,9 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 
 			<div class="tw-text-purple tw-flex tw-items-center tw-whitespace-nowrap">
 				@if (new) {
-					<span hlmP size="sm" class="tw-bg-yellow tw-px-2 tw-mr-2 tw-rounded-[10px]">NEU</span>
+					<span hlmP size="sm" class="tw-bg-yellow tw-px-2 tw-me-2 tw-rounded-[10px]">NEU</span>
 				}
-				<ng-icon hlm class="tw-mr-2" size="sm" name="lucideClock" />
+				<ng-icon hlm class="tw-me-2" size="sm" name="lucideClock" />
 				{{ competency.studyLoad | hourPipe }} h
 			</div>
 		</div>

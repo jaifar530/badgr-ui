@@ -18,7 +18,7 @@ import { Competency } from '~/common/model/competency.model';
 						class="tw-bg-white tw-rounded-[10px] tw-border-purple tw-border-solid tw-border tw-h-[90px] tw-p-4"
 					>
 						<div class="tw-whitespace-nowrap tw-flex tw-items-center tw-mb-2">
-							<ng-icon hlm class="tw-mr-2" size="sm" name="lucideHexagon" /><span hlmP size="sm">{{
+							<ng-icon hlm class="tw-me-2" size="sm" name="lucideHexagon" /><span hlmP size="sm">{{
 								'RecBadge.competencies' | translate
 							}}</span>
 						</div>
@@ -28,7 +28,7 @@ import { Competency } from '~/common/model/competency.model';
 						class="tw-bg-white tw-rounded-[10px] tw-border-purple tw-border-solid tw-border tw-h-[90px] tw-p-4"
 					>
 						<div class="tw-whitespace-nowrap tw-flex tw-items-center tw-mb-2">
-							<ng-icon hlm class="tw-mr-2" size="sm" name="lucideClock" /><span hlmP size="sm">{{
+							<ng-icon hlm class="tw-me-2" size="sm" name="lucideClock" /><span hlmP size="sm">{{
 								'RecBadge.studyingTime' | translate
 							}}</span>
 						</div>
@@ -44,8 +44,8 @@ import { Competency } from '~/common/model/competency.model';
 					<div class="lg:tw-flex tw-flex-wrap oeb-standard-padding-bottom">
 						<div class="tw-w-full lg:tw-w-[270px] lg:tw-flex-shrink-0 lg:tw-pb-0 tw-pb-4">
 							<div class="tw-flex tw-items-center">
-								<ng-icon hlm class="tw-mr-2" name="lucideHeart" />
-								<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ml-2">
+								<ng-icon hlm class="tw-me-2" name="lucideHeart" />
+								<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ms-2">
 									{{ 'RecBadge.newCompetencies' | translate }}
 								</h3>
 							</div>
@@ -62,8 +62,8 @@ import { Competency } from '~/common/model/competency.model';
 				<div class="lg:tw-flex tw-flex-wrap oeb-standard-padding-bottom">
 					<div class="tw-w-full lg:tw-w-[270px] lg:tw-flex-shrink-0 lg:tw-pb-0 tw-pb-4">
 						<div class="tw-flex tw-items-center">
-							<ng-icon hlm class="tw-mr-2" name="lucideHand" />
-							<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ml-2">
+							<ng-icon hlm class="tw-me-2" name="lucideHand" />
+							<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ms-2">
 								{{ 'RecBadge.skills' | translate }}
 							</h3>
 						</div>
@@ -81,8 +81,8 @@ import { Competency } from '~/common/model/competency.model';
 				<div class="lg:tw-flex tw-flex-wrap oeb-standard-padding-bottom">
 					<div class="tw-w-full lg:tw-w-[270px] lg:tw-flex-shrink-0 lg:tw-pb-0 tw-pb-4">
 						<div class="tw-flex tw-items-center">
-							<ng-icon hlm class="tw-mr-2" name="lucideBookOpen" />
-							<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ml-2">
+							<ng-icon hlm class="tw-me-2" name="lucideBookOpen" />
+							<h3 hlmH3 class="tw-font-medium tw-text-oebblack tw-ms-2">
 								{{ 'RecBadge.knowledge' | translate }}
 							</h3>
 						</div>

@@ -16,7 +16,7 @@ import { HlmSwitch } from '@spartan-ng/helm/switch';
 			<div class="tw-flex tw-flex-col tw-items-center tw-h-full tw-w-full">
 				<a class="tw-w-full" [routerLink]="['../badge-collections/collection/', collection.slug]">
 					<h2
-						class="tw-w-full tw-text-oebblack tw-font-semibold tw-text-[22px] tw-leading-[120%] tw-text-left"
+						class="tw-w-full tw-text-oebblack tw-font-semibold tw-text-[22px] tw-leading-[120%] tw-text-start"
 					>
 						{{ collection.name }}
 					</h2>

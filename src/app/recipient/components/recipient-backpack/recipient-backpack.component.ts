@@ -119,7 +119,7 @@ export type BackpackTab = (typeof _backpackTabs)[number];
 								<ng-icon
 									(click)="openCollectionInfoDialog()"
 									hlm
-									class="tw-text-purple tw-min-w-10 tw-ml-2"
+									class="tw-text-purple tw-min-w-10 tw-ms-2"
 									size="lg"
 									name="lucideInfo"
 								/>
@@ -136,7 +136,7 @@ export type BackpackTab = (typeof _backpackTabs)[number];
 								[text]="'BadgeCollection.createCollection' | translate"
 								variant="secondary"
 								size="md"
-								class="tw-mt-4 tw-float-right"
+								class="tw-mt-4 tw-float-end"
 								[routerLink]="['../badge-collections', 'create']"
 							/>
 						</div>

@@ -18,7 +18,7 @@
 									(click)="closeDialog()"
 									[routerLink]="[`/issuer/networks/${network().slug}`]"
 								>
-									<ng-icon size="24px" hlm name="lucideCircleChevronRight" class="tw-mr-1"></ng-icon>
+									<ng-icon size="24px" hlm name="lucideCircleChevronRight" class="tw-me-1"></ng-icon>
 									{{ 'Quotas.exceedDialogVisitNetwork' | translate }}
 								</a>
 							</p>
@@ -44,7 +44,7 @@
 									[src]="`assets/oeb/images/quotas/logo_${quota().key.toLowerCase()}.svg`"
 									width="152"
 								/>
-								<figcaption class="tw-text-center tw-pr-3 tw-w-[152px]">
+								<figcaption class="tw-text-center tw-pe-3 tw-w-[152px]">
 									<h3
 										class="tw-font-bold tw-text-[18px]/[1.2em] tw-mt-2"
 										[class]="{
@@ -137,7 +137,7 @@
 							@if (!isWebcomponentContext) {
 								<p class="tw-mb-8">
 									<a
-										class="tw-text-right tw-text-link tw-underline tw-mt-6"
+										class="tw-text-end tw-text-link tw-underline tw-mt-6"
 										target="_blank"
 										[href]="
 											this.translate.currentLang === 'de' ? '/page/produkte' : '/page/pricing'
@@ -231,7 +231,7 @@
 					></oeb-select>
 
 					<div class="tw-mt-7 md:tw-mt-8 tw-mb-7 md:tw-mb-8">
-						<label class="tw-block tw-pb-[2px] tw-pl-[3px]">
+						<label class="tw-block tw-pb-[2px] tw-ps-[3px]">
 							<span
 								class="tw-text-oebblack tw-font-semibold md:tw-leading-[28px] md:tw-text-[20px] tw-leading-[19px] tw-text-[14px]"
 							>
@@ -309,7 +309,7 @@
 						></oeb-select>
 
 						<div class="tw-mt-7 md:tw-mt-8 tw-mb-7 md:tw-mb-8">
-							<label class="tw-block tw-pb-[2px] tw-pl-[3px]">
+							<label class="tw-block tw-pb-[2px] tw-ps-[3px]">
 								<span
 									class="tw-text-oebblack tw-font-semibold md:tw-leading-[28px] md:tw-text-[20px] tw-leading-[19px] tw-text-[14px]"
 								>

@@ -19,7 +19,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 					<button class="tw-w-full hover:tw-no-underline tw-border-0 tw-bg-transparent" hlmAccordionTrigger>
 						<div class="tw-w-full tw-flex tw-justify-between tw-gap-1">
 							<div class="tw-flex tw-gap-2 tw-flex-shrink-1">
-								<span class="tw-font-bold tw-text-left tw-text-oebblack"
+								<span class="tw-font-bold tw-text-start tw-text-oebblack"
 									>{{ name }}
 									@if (framework == 'esco') {
 										<a
@@ -32,7 +32,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 									}
 								</span>
 							</div>
-							<div class="tw-text-purple tw-whitespace-nowrap tw-flex tw-items-center tw-gap-2 tw-mr-2">
+							<div class="tw-text-purple tw-whitespace-nowrap tw-flex tw-items-center tw-gap-2 tw-me-2">
 								<ng-icon hlm name="lucideClock" class="!tw-w-4 !tw-h-4" />
 								<span>{{ studyload }} </span>
 							</div>

@@ -36,7 +36,7 @@
 							</p>
 							<div class="tw-flex tw-gap-1 tw-pt-4 oeb-standard-padding-bottom">
 								@for (tag of learningPath.tags; track tag) {
-									<div class="tag tw-border-[var(--color-purple)] tw-ml-0">
+									<div class="tag tw-border-[var(--color-purple)] tw-ms-0">
 										{{ tag }}
 									</div>
 								}
@@ -171,9 +171,9 @@
 				/>
 			</div>
 			<div
-				class="tw-absolute tw-border-l-8 tw-border-lightpurple tw-border-solid tw-left-[74px] md:tw-left-[100px] tw-top-[50px] md:tw-top-[-100px] tw-bottom-[20px]"
+				class="tw-absolute tw-border-s-8 tw-border-lightpurple tw-border-solid tw-start-[74px] md:tw-start-[100px] tw-top-[50px] md:tw-top-[-100px] tw-bottom-[20px]"
 			></div>
-			<div class="tw-pl-[120px] md:tw-pl-[145px]">
+			<div class="tw-ps-[120px] md:tw-ps-[145px]">
 				<h3 hlmH3 class="tw-uppercase tw-font-bold tw-text-purple tw-pb-4">
 					{{ 'LearningPath.lpBadges' | translate }}
 				</h3>
@@ -181,7 +181,7 @@
 					@for (badge of learningPathReverseBadges; track badge; let i = $index) {
 						<div class="tw-relative" @inOutAnimation>
 							<div
-								class="tw-absolute tw-left-[-69px] md:tw-left-[-69px] tw-top-[50%] tw-translate-y-[-50%]"
+								class="tw-absolute tw-start-[-69px] md:tw-start-[-69px] tw-top-[50%] tw-translate-y-[-50%]"
 							>
 								<div
 									class="tw-flex tw-items-center tw-justify-center tw-w-[56px] tw-h-[56px] tw-relative"
@@ -199,7 +199,7 @@
 										<img src="assets/oeb/images/learningPath/participation_icon.png" />
 									}
 									<div
-										class="tw-absolute tw-text-[22px] tw-font-bold tw-text-white tw-top-[50%] tw-translate-y-[-50%] tw-left-[50%] tw-translate-x-[-50%]"
+										class="tw-absolute tw-text-[22px] tw-font-bold tw-text-white tw-top-[50%] tw-translate-y-[-50%] tw-start-[50%] tw-translate-x-[-50%]"
 									>
 										{{ learningPath.badges.length - i }}
 									</div>

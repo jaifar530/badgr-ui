@@ -32,7 +32,7 @@ import { HlmH3 } from '@spartan-ng/helm/typography';
 						id="forminput"
 						placeholder="{{ 'LearningPath.searchMds' | translate }}"
 						[(ngModel)]="searchQuery"
-						class="tw-w-[300px] tw-border-solid tw-border-purple tw-bg-white tw-mr-6"
+						class="tw-w-[300px] tw-border-solid tw-border-purple tw-bg-white tw-me-6"
 						hlmInput
 					/>
 				</div>

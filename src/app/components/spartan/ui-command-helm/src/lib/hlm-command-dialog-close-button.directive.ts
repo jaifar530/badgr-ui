@@ -19,7 +19,7 @@ export class HlmCommandDialogCloseButton {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
 		hlm(
-			'tw-absolute tw-top-3 tw-right-3 focus-visible:tw-outline-none focus-visible:tw-ring-2 focus-visible:tw-ring-offset-2 focus-visible:tw-ring-ring tw-font-medium tw-h-10 hover:tw-bg-accent hover:tw-text-accent-foreground tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-2 tw-ring-offset-background tw-rounded-md tw-text-sm tw-transition-colors !tw-h-5 !tw-p-1 !tw-w-5',
+			'tw-absolute tw-top-3 tw-end-3 focus-visible:tw-outline-none focus-visible:tw-ring-2 focus-visible:tw-ring-offset-2 focus-visible:tw-ring-ring tw-font-medium tw-h-10 hover:tw-bg-accent hover:tw-text-accent-foreground tw-inline-flex tw-items-center tw-justify-center tw-px-4 tw-py-2 tw-ring-offset-background tw-rounded-md tw-text-sm tw-transition-colors !tw-h-5 !tw-p-1 !tw-w-5',
 			this.userClass(),
 		),
 	);

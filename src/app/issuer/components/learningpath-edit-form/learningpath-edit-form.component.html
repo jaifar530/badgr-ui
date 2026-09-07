@@ -66,7 +66,7 @@
 								[innerHTML]="'RecBadge.image' | translate | uppercase"
 							></span>
 							<div
-								class="tw-flex tw-flex-col tw-gap-4 lg:tw-flex-row tw-bg-white tw-p-8 tw-justify-evenly tw-mr-auto tw-rounded-2xl tw-h-fit tw-border tw-border-solid tw-border-purple"
+								class="tw-flex tw-flex-col tw-gap-4 lg:tw-flex-row tw-bg-white tw-p-8 tw-justify-evenly tw-me-auto tw-rounded-2xl tw-h-fit tw-border tw-border-solid tw-border-purple"
 							>
 								<div class="tw-w-full tw-bg-mint tw-rounded-[10px] tw-py-[16px] tw-px-[32px]">
 									<bg-formfield-image
@@ -157,7 +157,7 @@
 							hlmP
 							size="sm"
 							[hidden]="!isCustomImageLarge"
-							class="tw-font-normal md:tw-pl-[13.5rem] u-text-error"
+							class="tw-font-normal md:tw-ps-[13.5rem] u-text-error"
 						>
 							{{ 'CreateBadge.imageTooLarge' | translate }}.
 						</p>
@@ -197,7 +197,7 @@
 									<ng-icon
 										hlm
 										name="lucideSearch"
-										class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
+										class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
 									></ng-icon>
 								</div>
 								<!-- Group By  -->
@@ -433,7 +433,7 @@
 							</div>
 						</div>
 						@if (lpTags.size > 0) {
-							<div class="tw-flex tw-flex-wrap tw-gap-4 tw-w-[70%] tw-ml-[3.2rem]">
+							<div class="tw-flex tw-flex-wrap tw-gap-4 tw-w-[70%] tw-ms-[3.2rem]">
 								@for (tag of lpTags; track tag) {
 									<div class="tw-flex tw-items-center tw-rounded-full tw-py-1 tw-mb-2">
 										<oeb-button
@@ -568,7 +568,7 @@
 	<form [formGroup]="learningPathForm.rawControl" #formElem (ngSubmit)="onSubmit()" novalidate>
 		<div class="tw-flex tw-justify-between md:tw-justify-end tw-flex-wrap sm:tw-flex-nowrap tw-gap-2 tw-mt-8">
 			<oeb-button
-				class="tw-mr-4"
+				class="tw-me-4"
 				type="button"
 				variant="secondary"
 				(click)="cancelClicked()"

@@ -9,11 +9,11 @@
 			@if (showExpiration() && hasControl('valid_from') && hasControl('expires_at')) {
 				<li>
 					<ng-template #collapseExpirationTrigger>
-						<ng-icon size="24px" hlm name="lucideClockFading" class="tw-mr-1 tw-text-oebblack"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideClockFading" class="tw-me-1 tw-text-oebblack"></ng-icon>
 						<span
 							[class.tw-font-semibold]="expirationCollapsible.expanded"
 							[class.tw-font-normal]="!expirationCollapsible.expanded"
-							class="tw-text-lg tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-text-oebblack tw-me-auto"
 							[innerHTML]="'QrCode.expiration' | translate"
 						></span>
 					</ng-template>
@@ -58,11 +58,11 @@
 			@if (showCourseUrl() && hasControl('courseUrl')) {
 				<li>
 					<ng-template #courseUrlTrigger>
-						<ng-icon size="24px" hlm name="lucideExternalLink" class="tw-mr-1"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideExternalLink" class="tw-me-1"></ng-icon>
 						<span
 							[class.tw-font-semibold]="courseUrlCollapsible.expanded"
 							[class.tw-font-normal]="!courseUrlCollapsible.expanded"
-							class="tw-text-lg tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-text-oebblack tw-me-auto"
 							[innerHTML]="'CreateBadge.linkToCourse' | translate"
 						></span>
 					</ng-template>
@@ -98,11 +98,11 @@
 			@if (showCourseDate() && hasControl('activity_start_date') && hasControl('activity_end_date')) {
 				<li>
 					<ng-template #collapseCourseDateTrigger>
-						<ng-icon size="24px" hlm name="lucideCalendarDays" class="tw-mr-1"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideCalendarDays" class="tw-me-1"></ng-icon>
 						<span
 							[class.tw-font-semibold]="courseDateCollapsible.expanded"
 							[class.tw-font-normal]="!courseDateCollapsible.expanded"
-							class="tw-text-lg tw-font-normal tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-font-normal tw-text-oebblack tw-me-auto"
 							[innerHTML]="'RecBadge.courseDate' | translate"
 						></span>
 					</ng-template>
@@ -147,11 +147,11 @@
 			@if (showLocation() && hasControl('activity_zip')) {
 				<li>
 					<ng-template #venueTrigger>
-						<ng-icon size="24px" hlm name="lucideMapPin" class="tw-mr-1"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideMapPin" class="tw-me-1"></ng-icon>
 						<span
 							[class.tw-font-semibold]="activityPlaceCollapsible.expanded"
 							[class.tw-font-normal]="!activityPlaceCollapsible.expanded"
-							class="tw-text-lg tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-text-oebblack tw-me-auto"
 							[innerHTML]="'RecBadge.venue' | translate"
 						></span>
 					</ng-template>
@@ -203,11 +203,11 @@
 			@if (showEvidence() && evidenceItems) {
 				<li>
 					<ng-template #collapseEvidenceTrigger>
-						<ng-icon size="24px" hlm name="lucideBookOpen" class="tw-mr-1"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideBookOpen" class="tw-me-1"></ng-icon>
 						<span
 							[class.tw-font-semibold]="evidenceCollapsible.expanded"
 							[class.tw-font-normal]="!evidenceCollapsible.expanded"
-							class="tw-text-lg tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-text-oebblack tw-me-auto"
 							[innerHTML]="'Issuer.narrative' | translate"
 						></span>
 					</ng-template>
@@ -269,7 +269,7 @@
 										class="tw-w-full tw-p-3 tw-border tw-border-solid tw-border-gray-300 tw-rounded-md tw-min-h-[120px] tw-resize-y focus:tw-outline-none focus:tw-border-purple focus:tw-ring-1 focus:tw-ring-purple"
 										maxlength="600"
 									></textarea>
-									<span class="tw-text-sm tw-text-gray-500 tw-mt-1 tw-text-right">
+									<span class="tw-text-sm tw-text-gray-500 tw-mt-1 tw-text-end">
 										{{ sharedNarrative.length }} / 600
 									</span>
 								</div>
@@ -288,11 +288,11 @@
 				}
 				<li>
 					<ng-template #dateOfBirthTrigger>
-						<ng-icon size="24px" hlm name="lucideCake" class="tw-mr-1 tw-text-oebblack"></ng-icon>
+						<ng-icon size="24px" hlm name="lucideCake" class="tw-me-1 tw-text-oebblack"></ng-icon>
 						<span
 							[class.tw-font-semibold]="dateOfBirthCollapsible.expanded"
 							[class.tw-font-normal]="!dateOfBirthCollapsible.expanded"
-							class="tw-text-lg tw-text-oebblack tw-mr-auto"
+							class="tw-text-lg tw-text-oebblack tw-me-auto"
 							[innerHTML]="'Issuer.recipientDateOfBirth' | translate"
 						></span>
 					</ng-template>

@@ -44,7 +44,7 @@ type MatchOrProgressType = { match?: string; progress?: number };
 					class="tw-bg-white tw-w-full tw-relative tw-h-[175px] tw-items-center tw-flex tw-justify-center tw-p-2 tw-rounded-[3px]"
 				>
 					@if (!completed()) {
-						<div class="tw-absolute tw-top-[10px] tw-right-[10px]">
+						<div class="tw-absolute tw-top-[10px] tw-end-[10px]">
 							<img
 								src="assets/oeb/images/learningPath/learningPathIcon.svg"
 								class="tw-w-[30px]"
@@ -54,7 +54,7 @@ type MatchOrProgressType = { match?: string; progress?: number };
 					}
 					@if (completed()) {
 						<div
-							class="tw-absolute tw-top-[10px] tw-right-[10px] tw-flex tw-justify-center tw-items-center tw-gap-2"
+							class="tw-absolute tw-top-[10px] tw-end-[10px] tw-flex tw-justify-center tw-items-center tw-gap-2"
 						>
 							<div class="tw-inline-block">
 								<img
@@ -135,8 +135,8 @@ type MatchOrProgressType = { match?: string; progress?: number };
 					}
 
 					<ng-template #progressTemplate>
-						<div class="tw-absolute tw-w-full tw-text-left">
-							<span class="tw-ml-2 tw-text-sm tw-text-[#E0F2FE]">
+						<div class="tw-absolute tw-w-full tw-text-start">
+							<span class="tw-ms-2 tw-text-sm tw-text-[#E0F2FE]">
 								@if (!completed() && (progressValue() ?? 0) > 0) {
 									<span>{{ progressValue() }}%</span>
 								} @else if (completed()) {
@@ -147,11 +147,11 @@ type MatchOrProgressType = { match?: string; progress?: number };
 					</ng-template>
 
 					<ng-template #requestedTemplate>
-						<div class="tw-absolute tw-w-full tw-text-left tw-flex tw-items-center">
-							<span class="tw-bg-purple tw-rounded-[50%] tw-h-[20px] tw-w-[20px] tw-ml-2">
+						<div class="tw-absolute tw-w-full tw-text-start tw-flex tw-items-center">
+							<span class="tw-bg-purple tw-rounded-[50%] tw-h-[20px] tw-w-[20px] tw-ms-2">
 								<ng-icon hlm variant="sm" class="tw-text-white tw-box-border" name="lucideCheck" />
 							</span>
-							<span class="tw-ml-2 tw-text-sm tw-text-purple">
+							<span class="tw-ms-2 tw-text-sm tw-text-purple">
 								{{ 'LearningPath.successRequestPath' | translate }}
 							</span>
 						</div>

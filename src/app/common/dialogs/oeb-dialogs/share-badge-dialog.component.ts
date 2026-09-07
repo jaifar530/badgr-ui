@@ -27,7 +27,7 @@ const COPY_NOTIF_TIMEOUT_MS: number = 3000;
 				</h3>
 			</hlm-dialog-header>
 			<p hlmP class="oeb tw-text-base tw-font-bold tw-pb-1">{{ 'RecBadge.shareViaLink' | translate }}</p>
-			<div class="tw-flex tw-flex-row tw-gap-2 tw-pb-8 tw-pr-8 tw-relative">
+			<div class="tw-flex tw-flex-row tw-gap-2 tw-pb-8 tw-pe-8 tw-relative">
 				<input
 					[value]="shareUrl"
 					readonly
@@ -45,7 +45,7 @@ const COPY_NOTIF_TIMEOUT_MS: number = 3000;
 				}}</span>
 			</div>
 			<p hlmP class="oeb tw-text-base tw-font-bold tw-pb-1">{{ 'RecBadge.shareViaLinkedIn' | translate }}</p>
-			<div class="tw-flex tw-flex-row tw-gap-2 tw-pr-8">
+			<div class="tw-flex tw-flex-row tw-gap-2 tw-pe-8">
 				<img
 					src="../../../breakdown/static/scss/images/social-linkedin.svg"
 					width="38"

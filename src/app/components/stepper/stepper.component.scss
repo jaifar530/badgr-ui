@@ -47,9 +47,9 @@
 
 .step-title {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	bottom: -25px;
-	left: 0;
+	inset-inline-start: 0;
 	margin: auto 0;
 	height: 0;
 	color: var(--color-black);
@@ -64,7 +64,7 @@
 	height: 1px;
 	background-color: var(--color-purple);
 	top: 50%;
-	left: -50%;
+	inset-inline-start: -50%;
 	z-index: -1;
 }
 

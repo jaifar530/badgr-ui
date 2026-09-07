@@ -26,7 +26,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 			<div class="forminput-x-labelrow">
 				<label [class]="labelStyle" for="image_field{{ uniqueIdSuffix }}">{{ label }}</label>
 				@if (sublabelRight) {
-					<span class="tw-mr-auto tw-ml-2 tw-font-[rubik] tw-text-oebblack tw-text-sm tw-font-normal">{{
+					<span class="tw-me-auto tw-ms-2 tw-font-[rubik] tw-text-oebblack tw-text-sm tw-font-normal">{{
 						sublabelRight
 					}}</span>
 				}
@@ -91,7 +91,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 						<p class="dropzone-x-info1">
 							<span cass="tw-font-bold">{{ dropZoneInfo1 }} </span>
 							@if (dropZoneInfo1) {
-								<span class="tw-inline-block tw-font-normal tw-my-1 tw-mr-1">
+								<span class="tw-inline-block tw-font-normal tw-my-1 tw-me-1">
 									{{ 'General.or' | translate }}
 								</span>
 							}
@@ -103,7 +103,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 					<!-- dont let user select icon when uploading badge -->
 					@if (loaderName != 'basic' && dropZoneInfo2) {
 						<p class="dropzone-x-info2">
-							<span class="tw-inline-block tw-my-1 tw-mr-1">{{ 'General.or' | translate }}</span>
+							<span class="tw-inline-block tw-my-1 tw-me-1">{{ 'General.or' | translate }}</span>
 							<span
 								id="nounProject_span"
 								class="u-text-link tw-underline tw-inline-block tw-font-normal"

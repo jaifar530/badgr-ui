@@ -12,7 +12,7 @@ import { ShadowDomComponent } from '../shadow-dom/shadow-dom.component';
 					<div class="page-padding">
 						@if (headline()) {
 							<h1
-								class="lg:tw-pl-[10%] tw-font-extrabold tw-text-purple md:tw-leading-[55.2px] md:tw-text-[46px] tw-leading-[36px] tw-text-[30px] tw-mb-4"
+								class="lg:tw-ps-[10%] tw-font-extrabold tw-text-purple md:tw-leading-[55.2px] md:tw-text-[46px] tw-leading-[36px] tw-text-[30px] tw-mb-4"
 							>
 								{{ headline() }}
 							</h1>

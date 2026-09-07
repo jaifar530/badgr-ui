@@ -18,6 +18,6 @@ import { ClassValue } from 'clsx';
 export class HlmMenuItemSubIndicator {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
-		hlm('tw-inline-block tw-ml-auto tw-h-4 tw-w-4', this.userClass()),
+		hlm('tw-inline-block tw-ms-auto tw-h-4 tw-w-4', this.userClass()),
 	);
 }

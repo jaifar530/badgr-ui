@@ -34,17 +34,17 @@ export type Tab = {
 				>
 					<div class="tw-flex tw-items-center tw-justify-center">
 						@if (tab.icon) {
-							<ng-icon size="38px" [name]="tab.icon" class="tw-mr-2"></ng-icon>
+							<ng-icon size="38px" [name]="tab.icon" class="tw-me-2"></ng-icon>
 						} @else if (tab.img) {
-							<img class="tw-w-10 tw-mr-2" [src]="tab.img" alt="Tab Image" />
+							<img class="tw-w-10 tw-me-2" [src]="tab.img" alt="Tab Image" />
 						}
 						<span class="tw-text-lg tw-leading-[130%]">{{ tab.title | translate }}</span>
 						@if (tab.count !== undefined) {
 							@if (countStyle() === 'parentheses') {
-								<span class="tw-ml-1 md:tw-text-lg tw-font-semibold"> ({{ tab.count }}) </span>
+								<span class="tw-ms-1 md:tw-text-lg tw-font-semibold"> ({{ tab.count }}) </span>
 							} @else {
 								<div
-									class="md:tw-w-7 md:tw-h-7 tw-h-5 tw-w-5 tw-flex tw-items-center tw-justify-center tw-ml-2 tw-p-1 tw-rounded-full tw-bg-purple tw-text-white tw-text-sm"
+									class="md:tw-w-7 md:tw-h-7 tw-h-5 tw-w-5 tw-flex tw-items-center tw-justify-center tw-ms-2 tw-p-1 tw-rounded-full tw-bg-purple tw-text-white tw-text-sm"
 								>
 									{{ tab.count }}
 								</div>

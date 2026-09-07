@@ -14,7 +14,7 @@
 					[variant]="'black'"
 				></oeb-tabs>
 			</div>
-			<div class="tw-border-purple tw-border tw-rounded-[20px] md:tw-text-right tw-text-center tw-max-w-[600px]">
+			<div class="tw-border-purple tw-border tw-rounded-[20px] md:tw-text-end tw-text-center tw-max-w-[600px]">
 				@if (issuers?.length > 0 && activeTab === 'issuers') {
 					<oeb-button
 						class="md:tw-whitespace-nowrap"
@@ -41,7 +41,7 @@
 					@if (activeTab === 'issuers') {
 						<div class="tw-flex tw-items-center tw-gap-2 tw-mt-2">
 							<ng-icon hlm class="tw-text-purple tw-min-w-10" size="lg" name="lucideInfo" />
-							<p class="tw-text-oebblack tw-text-left">
+							<p class="tw-text-oebblack tw-text-start">
 								<span [innerHTML]="'Issuer.rolesAndRightsInfo1' | translate"> </span>
 								<oeb-button
 									size="smallText"
@@ -96,7 +96,7 @@
 						<img class="tw-inline-block tw-h-[90px]" alt="Beta Logo" src="assets/oeb/images/wissam-mascot.png" />
 						<div class="tw-flex md:tw-block tw-pb-4">
 							<p
-								class="tw-pt-4 tw-text-left tw-pl-4 md:tw-pl-0"
+								class="tw-pt-4 tw-text-start tw-ps-4 md:tw-ps-0"
 								[innerHTML]="'Issuer.betaPhase' | translate"
 							></p>
 						</div>
@@ -109,7 +109,7 @@
 			@if (activeTab === 'issuers') {
 				<div class="tw-flex tw-items-center tw-gap-2 tw-mt-2">
 					<ng-icon hlm class="tw-text-purple tw-min-w-10" size="lg" name="lucideInfo" />
-					<p class="tw-text-oebblack tw-text-left">
+					<p class="tw-text-oebblack tw-text-start">
 						<span [innerHTML]="'Issuer.rolesAndRightsInfo1' | translate"> </span>
 						<oeb-button
 							size="smallText"
@@ -131,7 +131,7 @@
 					src="assets/oeb/images/wissam-mascot.png"
 				/>
 				<div class="tw-flex md:tw-block tw-pb-4">
-					<p class="tw-pt-4 tw-text-left tw-pl-4 md:tw-pl-0" [innerHTML]="'Issuer.betaPhase' | translate"></p>
+					<p class="tw-pt-4 tw-text-start tw-ps-4 md:tw-ps-0" [innerHTML]="'Issuer.betaPhase' | translate"></p>
 				</div>
 			</div>
 		</div>
@@ -150,7 +150,7 @@
 					<ng-icon
 						hlm
 						(click)="pluginBoxElement.nativeElement.remove()"
-						class="tw-w-4 tw-h-4 tw-ml-2 tw-cursor-pointer tw-inline-block tw-absolute tw-top-2 tw-right-2"
+						class="tw-w-4 tw-h-4 tw-ms-2 tw-cursor-pointer tw-inline-block tw-absolute tw-top-2 tw-end-2"
 						name="lucideX"
 					/>
 					<div class="tw-flex md:tw-block tw-pb-4">
@@ -160,7 +160,7 @@
 							src="assets/oeb/images/issuerPage/plugin.svg"
 						/>
 						<p
-							class="tw-pt-4 tw-text-lg tw-text-left tw-pl-4 md:tw-pl-0 md:tw-text-center"
+							class="tw-pt-4 tw-text-lg tw-text-start tw-ps-4 md:tw-ps-0 md:tw-text-center"
 							[innerHTML]="'Issuer.askForPluginText' | translate"
 						></p>
 					</div>
@@ -232,7 +232,7 @@
 							<span
 								(click)="revokeStaffRequest(request.entity_id)"
 								[innerHTML]="'General.revoke' | translate"
-								class="tw-text-link tw-underline tw-text-lg tw-ml-2 tw-cursor-pointer"
+								class="tw-text-link tw-underline tw-text-lg tw-ms-2 tw-cursor-pointer"
 							></span>
 						</li>
 					}
@@ -246,14 +246,14 @@
 						[src]="selectedIssuer.image"
 						width="24"
 						height="24"
-						class="tw-absolute tw-left-2 tw-top-1/2 tw-transform -tw-translate-y-1/2 tw-rounded-full"
+						class="tw-absolute tw-start-2 tw-top-1/2 tw-transform -tw-translate-y-1/2 tw-rounded-full"
 					/>
 				}
 				<input
 					#issuerSearchInput
 					#issuerSearchInputModel="ngModel"
-					class="tw-bg-white tw-border tw-border-solid tw-border-[var(--color-purple)] tw-rounded-md tw-shadow-sm tw-p-2 tw-pr-10 tw-resize-none tw-text-sm tw-text-gray-700 tw-w-full"
-					[ngClass]="selectedIssuer ? 'tw-pl-10' : ''"
+					class="tw-bg-white tw-border tw-border-solid tw-border-[var(--color-purple)] tw-rounded-md tw-shadow-sm tw-p-2 tw-pe-10 tw-resize-none tw-text-sm tw-text-gray-700 tw-w-full"
+					[ngClass]="selectedIssuer ? 'tw-ps-10' : ''"
 					[(ngModel)]="issuerSearchQuery"
 					[ngModelOptions]="{ standalone: true }"
 					[placeholder]="'Issuer.searchIssuer' | translate"
@@ -264,7 +264,7 @@
 				<ng-icon
 					hlm
 					size="lg"
-					class="tw-absolute tw-top-[3px] tw-right-1 tw-w-6 tw-h-6 tw-pointer-events-none tw-text-purple"
+					class="tw-absolute tw-top-[3px] tw-end-1 tw-w-6 tw-h-6 tw-pointer-events-none tw-text-purple"
 					name="lucideSearch"
 				/>
 				@if (issuersShowResults && (issuersLoading || issuerSearchResults.length || issuerSearchLoaded)) {

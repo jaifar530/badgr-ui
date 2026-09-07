@@ -21,6 +21,17 @@ jobs:
           cache: npm
 
       - run: npm ci
+      # Fail before building rather than shipping a broken locale or a stale mirror.
+      - name: i18n + RTL source gates
+        run: |
+          npm run verify:i18n
+          npm run verify:rtl-css
+          # No NEW physical direction utilities - they do not mirror under dir=rtl.
+          # Logical forms: ms/me, ps/pe, start/end, text-start/text-end, gap.
+          BAD=$(git diff --unified=0 origin/wissam...HEAD -- "*.html" "*.ts" 2>/dev/null | grep "^+" | grep -v "^+++" | grep -E "tw-(ml|mr|pl|pr|left|right)-|tw-text-(left|right)|tw-space-x-" | grep -vc "physical-ok" || true)
+          echo "new physical utilities: $BAD"
+          [ "$BAD" -eq 0 ]
+
       - run: npm run build:app
       - run: npm run build:web-components:prod
 
@@ -32,8 +43,17 @@ jobs:
           D=$(grep -ro "changeLng(.de.)" dist/ --include="*.js" | wc -l)
           U=$(grep -c umami dist/index.html || true)
           T=$(find dist -name "tajawal*" | wc -l)
-          echo "palette=$P DE=$D umami=$U tajawal=$T"
-          [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ]
+          A=$(grep -c '"ar"' dist/assets/i18n/ar.json || true)
+          # <html> must carry dir; html-minifier strips the quotes.
+          H=$(grep -cE "<html[^>]*dir=" dist/index.html || true)
+          # The pre-Angular direction script must survive minification.
+          S=$(grep -c documentElement dist/index.html || true)
+          # The mirrored legacy stylesheet must reach the bundle.
+          # The CSS minifier strips the attribute quotes: dir="rtl" ships as dir=rtl.
+          R=$(cat dist/styles-*.css | grep -o "dir=["']\?rtl" | wc -l)
+          echo "palette=$P DE=$D umami=$U tajawal=$T ar=$A html-dir=$H dir-script=$S rtl-css=$R"
+          [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ] && [ "$A" -gt 0 ] && [ "$H" -gt 0 ] && [ "$S" -gt 0 ] && [ "$R" -gt 0 ]
+
 
       - name: Brand the page title
         run: sed -i 's|<title>Open Educational Badges</title>|<title>Wissam — وسام</title>|' dist/index.html

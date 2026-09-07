@@ -893,7 +893,7 @@ export class RecipientSkillVisualisationComponent implements OnChanges, OnDestro
 	}
 
 	getFormattedSkillText(idx: number, name: string): string {
-		return `<span class="tw-font-extrabold tw-mr-1">${this.padStart(idx + 1)}</span> ${name}`;
+		return `<span class="tw-font-extrabold tw-me-1">${this.padStart(idx + 1)}</span> ${name}`;
 	}
 
 	/**

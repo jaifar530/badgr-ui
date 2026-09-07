@@ -22,7 +22,7 @@ export class HlmMenuItemRadioIndicator {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
 		hlm(
-			'group-[.checked]:tw-opacity-100 tw-opacity-0 tw-absolute tw-left-2 tw-flex tw-h-3.5 tw-w-3.5 tw-items-center tw-justify-center',
+			'group-[.checked]:tw-opacity-100 tw-opacity-0 tw-absolute tw-start-2 tw-flex tw-h-3.5 tw-w-3.5 tw-items-center tw-justify-center',
 			this.userClass(),
 		),
 	);

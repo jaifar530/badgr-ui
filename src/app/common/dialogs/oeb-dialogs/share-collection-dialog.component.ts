@@ -31,7 +31,7 @@ import { saveAsImage } from '../../util/qrcode-util';
 					[value]="collection.permanentHash"
 				/>
 				<oeb-button
-					class="tw-absolute tw-top-1/2 tw-right-0 -tw-translate-y-1/2 tw-scale-75"
+					class="tw-absolute tw-top-1/2 tw-end-0 -tw-translate-y-1/2 tw-scale-75"
 					(click)="copyToClipboard(inputRef)"
 					icon="lucideCopy"
 					[size]="'icon'"

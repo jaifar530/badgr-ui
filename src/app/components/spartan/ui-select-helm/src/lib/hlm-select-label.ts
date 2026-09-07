@@ -17,7 +17,7 @@ export class HlmSelectLabel {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected readonly _computedClass = computed(() =>
 		hlm(
-			'tw-pl-8 tw-pr-2 tw-text-sm tw-font-semibold rtl:tw-pl-2 rtl:tw-pr-8',
+			'tw-ps-8 tw-pe-2 tw-text-sm tw-font-semibold rtl:tw-ps-2 rtl:tw-pe-8',
 			this._stickyLabels() ? 'tw-sticky tw-top-0 tw-bg-popover tw-block tw-z-[2]' : '',
 			this.userClass(),
 		),

@@ -152,7 +152,7 @@
 		transition: all 0.3s ease;
 		position: absolute;
 		bottom: 20px;
-		right: 20px;
+		inset-inline-end: 20px;
 
 		svg {
 			transition: transform 0.3s ease;
@@ -167,7 +167,7 @@
 
 		// Add padding to prevent text overlapping with arrow
 		.kpi-card__main {
-			padding-right: 50px; // Space for arrow (40px) + gap (10px)
+			padding-inline-end: 50px; // Space for arrow (40px) + gap (10px)
 		}
 
 		&:hover {

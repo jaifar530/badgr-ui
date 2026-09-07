@@ -196,7 +196,7 @@ export type RequestedBadge = {
 
 		<oeb-button
 			size="sm"
-			class="tw-float-right"
+			class="tw-float-end"
 			variant="blackborder"
 			[weight]="'medium'"
 			(click)="issueBadges()"

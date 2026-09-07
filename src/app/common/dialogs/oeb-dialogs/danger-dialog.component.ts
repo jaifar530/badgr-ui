@@ -37,7 +37,7 @@ import { provideIcons } from '@ng-icons/core';
 			} @else {
 				<div class="tw-flex tw-justify-around tw-mt-6">
 					<oeb-button variant="secondary" [text]="cancelText" (click)="closeDialog()"></oeb-button>
-					<oeb-button class="tw-mr-4" [text]="deleteText" (click)="deleteItem()"></oeb-button>
+					<oeb-button class="tw-me-4" [text]="deleteText" (click)="deleteItem()"></oeb-button>
 				</div>
 			}
 		</oeb-dialog>

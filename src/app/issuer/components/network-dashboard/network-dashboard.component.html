@@ -63,7 +63,7 @@
 					>
 				</div>
 				@if (isInDetailSubView()) {
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						<oeb-button
 							variant="secondary"
 							(click)="
@@ -75,7 +75,7 @@
 					</div>
 				}
 				@if (network().current_user_network_role !== 'staff') {
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						@switch (activeTab) {
 							@case ('partners') {
 								@if (network().current_user_network_role !== 'staff') {
@@ -85,7 +85,7 @@
 									></oeb-button>
 									<quota-information
 										quotas="NETWORK_MEMBERSHIPS"
-										class="tw-block tw-mt-2 tw-text-right"
+										class="tw-block tw-mt-2 tw-text-end"
 									/>
 								}
 							}
@@ -270,7 +270,7 @@
 <ng-template #pdfTemplatesTemplate>
 	<div class="oeb-section-sm">
 		<ng-template [bgAwaitPromises]="[pdfTemplatesPromise]">
-			<div class="md:tw-pr-[280px]">
+			<div class="md:tw-pe-[280px]">
 				<p class="oeb-break-words" hlmP [innerHTML]="'PDFTemplate.descriptionText' | translate"></p>
 
 				<p hlmP [innerHtml]="'PDFTemplate.exampleZipLink' | translate"></p>

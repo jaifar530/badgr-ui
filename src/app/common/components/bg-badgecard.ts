@@ -27,7 +27,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 	},
 	template: `
 		@if (mostRelevantStatus() && !showXIcon()) {
-			<div class="tw-absolute tw-top-0 tw-right-0 tw-bg-purple tw-text-white tw-px-2 tw-py-1">
+			<div class="tw-absolute tw-top-0 tw-end-0 tw-bg-purple tw-text-white tw-px-2 tw-py-1">
 				{{ 'General.' + mostRelevantStatus() | translate }}
 			</div>
 		}
@@ -35,7 +35,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 		<div class="tw-h-[100px]">
 			<div class="tw-flex tw-items-center tw-h-full">
 				@if (completed()) {
-					<div class="tw-absolute tw-top-[10px] tw-right-[10px] tw-flex tw-justify-center tw-items-center">
+					<div class="tw-absolute tw-top-[10px] tw-end-[10px] tw-flex tw-justify-center tw-items-center">
 						<div
 							class="tw-bg-white tw-inline-flex tw-rounded-full tw-justify-center tw-items-center tw-border-solid tw-border-purple tw-border-[2px] "
 						>
@@ -53,7 +53,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 					[loading-src]="badgeLoadingImageUrl"
 					[error-src]="badgeFailedImageUrl"
 				/>
-				<div class="tw-flex tw-flex-col tw-flex-wrap tw-pl-4 tw-py-2 tw-w-full">
+				<div class="tw-flex tw-flex-col tw-flex-wrap tw-ps-4 tw-py-2 tw-w-full">
 					@if (badgeSlug() && !publicUrl() && !imported()) {
 						<a
 							class="tw-font-bold tw-text-oebblack text-clamp title-clamp"
@@ -141,9 +141,9 @@ import { HlmP } from '@spartan-ng/helm/typography';
 						</div>
 					}
 
-					<div class="tw-absolute tw-left-0 tw-bottom-2 tw-w-full">
+					<div class="tw-absolute tw-start-0 tw-bottom-2 tw-w-full">
 						<!-- Show Verify or Share Button unless public -->
-						<div class="tw-float-right tw-pr-4">
+						<div class="tw-float-end tw-pe-4">
 							@if (verifyUrl()) {
 								<a
 									hlmP
@@ -158,7 +158,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 					</div>
 				</div>
 				<div
-					class="tw-float-right tw-relative tw-ml-auto tw-flex tw-items-center tw-flex-col tw-mr-2 tw-h-full"
+					class="tw-float-end tw-relative tw-ms-auto tw-flex tw-items-center tw-flex-col tw-me-2 tw-h-full"
 				>
 					@if (showCheckbox()) {
 						<oeb-checkbox
@@ -191,7 +191,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 				}
 			</div>
 		</div>
-		<!--<ul *ngIf="tags && tags.length" class="tw-mt-2 tw-leading-[0px]"><li class="tag tw-mt-2 tw-mr-2" *ngFor="let tag of tags">{{tag}}</li></ul>-->
+		<!--<ul *ngIf="tags && tags.length" class="tw-mt-2 tw-leading-[0px]"><li class="tag tw-mt-2 tw-me-2" *ngFor="let tag of tags">{{tag}}</li></ul>-->
 	`,
 	styles: [
 		`

@@ -28,13 +28,13 @@ import { TranslateService } from '@ngx-translate/core';
 			[checked]="checked"
 			(changed)="onChange($event)"
 			[formControl]="control"
-			[class.tw-mr-2]="!noMargin"
+			[class.tw-me-2]="!noMargin"
 			class="tw-mt-[1px]"
 		/>
 		<div class="tw-flex tw-flex-col">
-			<span class="tw-pl-[8px]" [ngClass]="{ 'tw-text-darkgrey': control?.disabled }" [innerHTML]="text"></span>
+			<span class="tw-ps-[8px]" [ngClass]="{ 'tw-text-darkgrey': control?.disabled }" [innerHTML]="text"></span>
 			@if (isErrorState) {
-				<oeb-input-error class="tw-text-red tw-pl-[3px]" [error]="errorMessageForDisplay"></oeb-input-error>
+				<oeb-input-error class="tw-text-red tw-ps-[3px]" [error]="errorMessageForDisplay"></oeb-input-error>
 			}
 		</div>
 	</label>`,

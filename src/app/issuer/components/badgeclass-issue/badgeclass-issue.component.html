@@ -44,7 +44,7 @@
 									</canvas>
 								} @else {
 									<img
-										class="tw-inline-block tw-absolute tw-right-0 tw-left-0 tw-m-auto tw-top-0 tw-z-0 tw-h-full"
+										class="tw-inline-block tw-absolute tw-end-0 tw-start-0 tw-m-auto tw-top-0 tw-z-0 tw-h-full"
 										alt="Certificate Preview"
 										src="assets/oeb/images/issuerPage/certificate_preview.svg"
 									/>
@@ -117,12 +117,12 @@
 					[courseUrlDefaultOpen]="badgeInstanceCourseUrl() !== null && badgeInstanceCourseUrl().length > 0"
 				/>
 
-				<span class="tw-text-oebblack tw-mt-10 tw-mb-4 tw-text-right tw-text-lg tw-block">
+				<span class="tw-text-oebblack tw-mt-10 tw-mb-4 tw-text-end tw-text-lg tw-block">
 					{{ 'Issuer.receivesBadgeByEmail' | translate }}</span
 				>
 				<div class="tw-flex tw-justify-end">
 					<oeb-button
-						class="tw-mr-4"
+						class="tw-me-4"
 						variant="secondary"
 						[disabled]="!!issueBadgeFinished"
 						[class.disabled]="!!issueBadgeFinished"

@@ -29,9 +29,9 @@ import { map, Subscription } from 'rxjs';
 			<ng-icon hlm [size]="iconSize()" [name]="icon()" />
 		}
 		@if (img()) {
-			<img class="md:tw-h-[30px] tw-h-[20px] tw-pr-4" [src]="img()" />
+			<img class="md:tw-h-[30px] tw-h-[20px] tw-pe-4" [src]="img()" />
 		}
-		<span [ngClass]="{ 'tw-ml-4': iconLeft() }" [innerHTML]="computedText()"></span>
+		<span [ngClass]="{ 'tw-ms-4': iconLeft() }" [innerHTML]="computedText()"></span>
 		@if (icon() && !iconLeft()) {
 			<ng-icon hlm [size]="iconSize()" [name]="icon()" />
 		}

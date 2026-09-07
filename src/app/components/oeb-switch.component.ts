@@ -10,7 +10,7 @@ import { NgModel } from '@angular/forms';
 	imports: [HlmLabel, HlmSwitch],
 	template: `
 		<label class="tw-flex tw-items-center" hlmLabel>
-			<hlm-switch class="tw-mr-2" />
+			<hlm-switch class="tw-me-2" />
 			@if (text()) {
 				<span> {{ text() }} </span>
 			}

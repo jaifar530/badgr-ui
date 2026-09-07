@@ -13,7 +13,7 @@
 						height="100"
 					/>
 				</figure>
-				<hgroup class="tw-flex tw-flex-col tw-justify-center tw-pl-8 oeb-break-words">
+				<hgroup class="tw-flex tw-flex-col tw-justify-center tw-ps-8 oeb-break-words">
 					<h1 hlmH1 class="tw-text-purple tw-font-semibold md:tw-text-[35px] xl:tw-text-[46px]">
 						{{ issuer.name }}
 					</h1>
@@ -249,7 +249,7 @@
 	</div>
 </div>
 
-<div class="oeb-section-sm md:tw-pr-[350px]">
+<div class="oeb-section-sm md:tw-pe-[350px]">
 	<oeb-tabs
 		[variant]="'lightpurple'"
 		(onTabChanged)="onTabChange($event)"
@@ -392,7 +392,7 @@
 			<div class="oeb-section-sm">
 				@if (!issuer?.quotas || issuer?.quotas?.quotas['PDFEDITOR'].quota) {
 					<ng-template [bgAwaitPromises]="pdfTemplatesPromise">
-						<div class="md:tw-pr-[280px]">
+						<div class="md:tw-pe-[280px]">
 							<p class="oeb-break-words" hlmP [innerHTML]="'PDFTemplate.descriptionText' | translate"></p>
 
 							<p hlmP [innerHtml]="'PDFTemplate.exampleZipLink' | translate"></p>
@@ -537,7 +537,7 @@
 							id="forminput"
 							placeholder="Badges durchsuchen"
 							[(ngModel)]="searchQuery"
-							class="tw-w-[300px] tw-border-solid tw-border-purple tw-bg-white tw-mr-6"
+							class="tw-w-[300px] tw-border-solid tw-border-purple tw-bg-white tw-me-6"
 							hlmInput
 						/>
 					</div>

@@ -25,7 +25,7 @@ import { provideIcons } from '@ng-icons/core';
 					{{ 'ErrorDialog.message' | translate }}
 				</div>
 				<div class="tw-w-full">
-					<label for="errorTextarea" class="tw-block tw-text-left tw-mb-2 font-bold"
+					<label for="errorTextarea" class="tw-block tw-text-start tw-mb-2 font-bold"
 						>Full Error Details:</label
 					>
 					<textarea
@@ -40,10 +40,10 @@ import { provideIcons } from '@ng-icons/core';
 							(click)="copyErrorMessage()"
 						>
 							@if (isCopied) {
-								<ng-icon hlm name="lucideCheck" size="sm" class="tw-inline-block tw-mr-2"></ng-icon>
+								<ng-icon hlm name="lucideCheck" size="sm" class="tw-inline-block tw-me-2"></ng-icon>
 							}
 							@if (!isCopied) {
-								<ng-icon hlm name="lucideClipboard" size="sm" class="tw-inline-block tw-mr-2"></ng-icon>
+								<ng-icon hlm name="lucideClipboard" size="sm" class="tw-inline-block tw-me-2"></ng-icon>
 							}
 							{{
 								isCopied

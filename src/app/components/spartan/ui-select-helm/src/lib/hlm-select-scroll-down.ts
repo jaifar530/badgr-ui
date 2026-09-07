@@ -12,7 +12,7 @@ import { ClassValue } from 'clsx';
 	host: {
 		'[class]': '_computedClass()',
 	},
-	template: ` <ng-icon hlm size="sm" class="tw-ml-2" name="lucideChevronDown" /> `,
+	template: ` <ng-icon hlm size="sm" class="tw-ms-2" name="lucideChevronDown" /> `,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HlmSelectScrollDown {

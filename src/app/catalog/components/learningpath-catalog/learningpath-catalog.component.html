@@ -48,7 +48,7 @@
 								<ng-icon
 									hlm
 									name="lucideSearch"
-									class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
+									class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
 								></ng-icon>
 							</div>
 						</div>
@@ -77,7 +77,7 @@
 				<div class="subtitle-wrapper">
 					<ul class="tags-wrapper oeb-standard-padding-bottom">
 						@for (tag of tagsControl.value | sort; track tag) {
-							<li class="tag tag-close tag-delete tag-button tw-mr-2" (click)="removeTag(tag)">
+							<li class="tag tag-close tag-delete tag-button tw-me-2" (click)="removeTag(tag)">
 								{{ tag }}
 							</li>
 						}

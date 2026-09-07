@@ -13,6 +13,6 @@ import type { ClassValue } from 'clsx';
 export class HlmDialogFooter {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected _computedClass = computed(() =>
-		hlm('tw-flex tw-flex-col-reverse sm:tw-flex-row sm:tw-justify-end sm:tw-space-x-2', this.userClass()),
+		hlm('tw-flex tw-flex-col-reverse sm:tw-flex-row sm:tw-justify-end sm:tw-gap-2', this.userClass()),
 	);
 }

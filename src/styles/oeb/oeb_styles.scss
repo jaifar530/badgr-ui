@@ -17,6 +17,14 @@ html {
 }
 /* colors from mycelia */
 :root {
+	// Wissam: screen.css:337-339 pins these to Open Sans / Metronic Slab, neither of
+	// which has Arabic coverage, and 292 legacy rules read them. This block wins on
+	// source order (screen.css is listed before oeb_styles.scss in angular.json —
+	// do not reorder that array). --font-family-code stays monospace on purpose.
+	--font-family: 'Tajawal', rubik, 'Open Sans', sans-serif;
+	--font-family-condensed: 'Tajawal', rubik, sans-serif;
+	--font-family-header: 'Tajawal', rubik, serif;
+
 	// Style guide
 
 	// Main
@@ -202,7 +210,7 @@ html {
 		fill: none;
 	}
 	ng-icon {
-		margin-right: var(--gridspacing);
+		margin-inline-end: var(--gridspacing);
 	}
 }
 
@@ -278,9 +286,9 @@ html {
 }
 
 .footer .footer-x-links li:not(:last-child) {
-	border-right: none;
-	margin-right: unset;
-	padding-right: unset;
+	border-inline-end: none;
+	margin-inline-end: unset;
+	padding-inline-end: unset;
 }
 
 .navbar .navbar-x-logo img {
@@ -384,7 +392,7 @@ html {
 		border-color: var(--color-interactive1);
 	}
 	&-close {
-		padding-right: 32px;
+		padding-inline-end: 32px;
 		background: transparent url('../../breakdown/static/scss/images/tooltip-close.svg') right 8px center no-repeat;
 		background-size: 12px 12px;
 	}

@@ -7,7 +7,7 @@ import { NgIcon } from '@ng-icons/core';
 		<div class="oeb-infoicon tw-relative tw-flex tw-items-center">
 			<ng-icon hlm name="lucideInfo" size="24px" class="tw-text-purple"></ng-icon>
 			<div
-				class="oeb-infoicon__description tw-text-white tw-bg-purple tw-py-2 tw-px-3 tw-rounded-[10px] tw-ml-1"
+				class="oeb-infoicon__description tw-text-white tw-bg-purple tw-py-2 tw-px-3 tw-rounded-[10px] tw-ms-1"
 				[style]="{ width: width() + 'px' }"
 			>
 				<ng-content />

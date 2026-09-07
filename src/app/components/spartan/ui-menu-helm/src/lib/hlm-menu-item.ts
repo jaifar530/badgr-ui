@@ -36,7 +36,7 @@ export class HlmMenuItem {
 			`tw-text-[14px] tw-leading-[19px] md:tw-text-[20px] md:tw-leading-[28px] tw-px-6 tw-py-3`,
 			`data-[size=sm]:tw-text-[14px] data-[size=sm]:tw-leading-[15.6px] data-[size=sm]:md:tw-text-[14px] data-[size=sm]:md:tw-leading-[15.6px] data-[size=sm]:tw-px-4 data-[size=sm]:tw-py-[7px]`,
 			`data-[size=md]:tw-text-[20px] data-[size=md]:tw-leading-[28px] data-[size=md]:md:tw-text-[24px] data-[size=md]:md:tw-leading-[33.6px]`,
-			`data-[inset]:tw-pl-8`,
+			`data-[inset]:tw-ps-8`,
 			`data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[ng-icon]:!text-destructive [&_ng-icon:not([class*='text-'])]:text-muted-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_ng-icon]:pointer-events-none [&_ng-icon]:shrink-0`,
 			this.userClass(),
 		),

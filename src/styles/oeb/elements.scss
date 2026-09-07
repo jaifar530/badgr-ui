@@ -1,6 +1,6 @@
 .page-padding {
-	padding-right: calc(var(--gridspacing) * 2);
-	padding-left: calc(var(--gridspacing) * 2);
+	padding-inline-end: calc(var(--gridspacing) * 2);
+	padding-inline-start: calc(var(--gridspacing) * 2);
 	padding-top: calc(var(--gridspacing) * 2);
 	padding-bottom: calc(var(--gridspacing) * 2);
 
@@ -9,12 +9,12 @@
 		padding-bottom: calc(var(--gridspacing) * 3);
 	}
 	@media (min-width: 768px) {
-		padding-right: calc(var(--gridspacing) * 4);
-		padding-left: calc(var(--gridspacing) * 4);
+		padding-inline-end: calc(var(--gridspacing) * 4);
+		padding-inline-start: calc(var(--gridspacing) * 4);
 	}
 	@media (min-width: 1324px) {
-		padding-right: calc(50% - 612px);
-		padding-left: calc(50% - 612px);
+		padding-inline-end: calc(50% - 612px);
+		padding-inline-start: calc(50% - 612px);
 	}
 }
 
@@ -124,19 +124,19 @@
 	.oeb-tag {
 		color: var(--color-purple);
 		background-color: white;
-		padding-left: 5px;
-		padding-right: 5px;
+		padding-inline-start: 5px;
+		padding-inline-end: 5px;
 		padding-top: 2px;
 		padding-bottom: 2px;
 		border-radius: 95px;
 		border-style: solid;
 		border-width: 1.59px;
 		border-color: var(--color-purple);
-		margin-right: 0.25rem;
+		margin-inline-end: 0.25rem;
 
 		@media (min-width: 768px) {
-			padding-left: 11.55px;
-			padding-right: 11.55px;
+			padding-inline-start: 11.55px;
+			padding-inline-end: 11.55px;
 			padding-top: 3.85px;
 			padding-bottom: 3.85px;
 		}

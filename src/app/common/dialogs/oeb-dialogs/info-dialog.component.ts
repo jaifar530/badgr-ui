@@ -64,7 +64,7 @@ import { provideIcons } from '@ng-icons/core';
 						[id]="'confirm-award-badge'"
 						width="max_content"
 						[size]="filledIcon ? 'sm' : 'md'"
-						[class]="filledIcon ? '' : 'tw-mr-4'"
+						[class]="filledIcon ? '' : 'tw-me-4'"
 						[text]="forwardText"
 						(click)="continue()"
 					></oeb-button>

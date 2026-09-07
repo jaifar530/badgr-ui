@@ -35,7 +35,7 @@ import { TranslateService } from '@ngx-translate/core';
 					class="tw-bg-white tw-rounded-[10px] tw-border-purple tw-border-solid tw-border tw-h-[90px] tw-p-4"
 				>
 					<div class="tw-whitespace-nowrap tw-flex tw-items-center tw-mb-2">
-						<ng-icon hlm class="tw-mr-2" size="sm" name="lucideHexagon" /><span hlmP size="sm">Badges</span>
+						<ng-icon hlm class="tw-me-2" size="sm" name="lucideHexagon" /><span hlmP size="sm">Badges</span>
 					</div>
 					<p hlmP #badgesCounter [countUp]="badges().length" class="tw-text-purple tw-font-bold"></p>
 				</div>
@@ -74,7 +74,7 @@ import { TranslateService } from '@ngx-translate/core';
 						<ng-icon
 							hlm
 							name="lucideSearch"
-							class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
+							class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
 						></ng-icon>
 					</div>
 					<span>{{ 'Badge.sortBy' | translate }} </span>

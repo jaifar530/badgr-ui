@@ -88,7 +88,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 							}
 						</svg>
 
-						<div class="tw-text-center sm:tw-text-left">
+						<div class="tw-text-center sm:tw-text-start">
 							<p
 								class="tw-text-[11px] tw-font-bold tw-uppercase tw-tracking-[0.14em]"
 								[class]="verifyState === 'valid' ? 'tw-text-[#0b7d56]' : 'tw-text-[#b02d15]'"

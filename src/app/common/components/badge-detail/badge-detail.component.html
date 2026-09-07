@@ -77,7 +77,7 @@
 							</div>
 							<quota-information
 								quotas="BADGE_AWARD"
-								class="tw-block tw-mt-4 tw-text-right tw-text-[18px]/[1.3em]"
+								class="tw-block tw-mt-4 tw-text-end tw-text-[18px]/[1.3em]"
 							/>
 						</div>
 					</div>
@@ -196,13 +196,13 @@
 											[trigger]="collapseCriteriaTrigger"
 											closeIcon="lucideChevronDown"
 											[iconSize]="'24px'"
-											[iconStyle]="'tw-text-oebblack tw-mr-2'"
+											[iconStyle]="'tw-text-oebblack tw-me-2'"
 											[defaultOpen]="hasCriteria"
 											[id]=""
 										>
 											<ng-template #collapseCriteriaTrigger>
 												<dt
-													class="tw-mr-auto tw-flex tw-justify-center tw-items-center tw-px-2"
+													class="tw-me-auto tw-flex tw-justify-center tw-items-center tw-px-2"
 												>
 													<ng-icon
 														hlm
@@ -210,14 +210,14 @@
 														class="tw-w-6 tw-h-6 tw-text-purple"
 													/>
 													<span
-														class="tw-text-oebblack tw-font-bold tw-text-sm tw-ml-2 tw-uppercase"
+														class="tw-text-oebblack tw-font-bold tw-text-sm tw-ms-2 tw-uppercase"
 														[innerHTML]="'Badge.awardCriteria' | translate"
 													></span>
 												</dt>
 											</ng-template>
 											@if (hasCriteria) {
 												<dd>
-													<ul class="tw-pl-10 tw-mt-1 tw-list-inside tw-list-disc">
+													<ul class="tw-ps-10 tw-mt-1 tw-list-inside tw-list-disc">
 														@for (criteria of config.awardCriteria; track criteria.name) {
 															<li class="tw-mb-2">
 																<p hlmP [size]="'sm'" class="tw-inline">
@@ -227,7 +227,7 @@
 																	<p
 																		hlmP
 																		[size]="'sm'"
-																		class="tw-text-darkgrey tw-italic tw-ml-4 tw-mt-1"
+																		class="tw-text-darkgrey tw-italic tw-ms-4 tw-mt-1"
 																	>
 																		{{ criteria.description }}
 																	</p>
@@ -237,7 +237,7 @@
 													</ul>
 												</dd>
 											} @else {
-												<ul class="tw-pr-2 tw-pl-8 tw-list-inside tw-list-disc">
+												<ul class="tw-pe-2 tw-ps-8 tw-list-inside tw-list-disc">
 													@for (competency of config.competencies; track competency) {
 														<li class="tw-mb-1">
 															<span class="tw-text-oebblack">{{ competency.name }}</span>
@@ -263,7 +263,7 @@
 									@if (config.createdAt) {
 										<div class="tw-flex tw-text-sm tw-mt-1 tw-pt-1 md:tw-flex-row tw-flex-col">
 											<dt class="tw-text-darkgray">{{ 'Badge.createdOn' | translate }}</dt>
-											<dd class="tw-font-medium md:tw-ml-2 tw-text-oebblack">
+											<dd class="tw-font-medium md:tw-ms-2 tw-text-oebblack">
 												<time [date]="config.createdAt" format="dd.MM.y"></time>
 											</dd>
 										</div>
@@ -273,7 +273,7 @@
 											<dt class="tw-text-sm tw-text-darkgray">
 												{{ 'RecBadgeDetail.issuedOn' | translate }}
 											</dt>
-											<dd class="tw-text-sm tw-font-medium tw-text-oebblack md:tw-ml-2">
+											<dd class="tw-text-sm tw-font-medium tw-text-oebblack md:tw-ms-2">
 												<time [date]="config.issuedOn" format="dd.MM.y"></time>
 											</dd>
 										</div>
@@ -283,7 +283,7 @@
 											<dt class="tw-text-sm tw-text-darkgray">
 												{{ 'RecBadgeDetail.validUntil' | translate }}
 											</dt>
-											<dd class="tw-text-sm tw-font-medium tw-text-oebblack md:tw-ml-2">
+											<dd class="tw-text-sm tw-font-medium tw-text-oebblack md:tw-ms-2">
 												<time [date]="config.validUntil" format="dd.MM.y"></time>
 											</dd>
 										</div>
@@ -313,7 +313,7 @@
 											<dt class="tw-text-darkgray">
 												{{ 'RecBadgeDetail.duration' | translate }}
 											</dt>
-											<dd class="tw-text-oebblack tw-font-medium md:tw-ml-2">
+											<dd class="tw-text-oebblack tw-font-medium md:tw-ms-2">
 												{{ +config.duration | hourPipe }} {{ 'RecBadge.hours' | translate }}
 											</dd>
 										</div>
@@ -343,7 +343,7 @@
 												{{ 'Badge.standard' | translate }}
 											</dt>
 											<dd
-												class="tw-text-sm tw-text-oebblack md:tw-ml-2 tw-flex tw-items-center tw-gap-1 tw-font-medium"
+												class="tw-text-sm tw-text-oebblack md:tw-ms-2 tw-flex tw-items-center tw-gap-1 tw-font-medium"
 											>
 												{{ config.version }}
 												<info-icon>
@@ -362,7 +362,7 @@
 											<dt class="tw-text-sm tw-text-darkgray">
 												{{ 'General.category' | translate }}
 											</dt>
-											<dd class="tw-text-sm tw-text-oebblack tw-font-medium md:tw-ml-2">
+											<dd class="tw-text-sm tw-text-oebblack tw-font-medium md:tw-ms-2">
 												{{ 'Badge.categories.' + config.category | translate }}
 											</dd>
 										</div>
@@ -373,7 +373,7 @@
 											<dt class="tw-text-sm tw-text-darkgray">
 												{{ 'RecBadgeDetail.expiryAfter' | translate }}
 											</dt>
-											<dd class="tw-text-sm tw-text-oebblack tw-font-medium md:tw-ml-2">
+											<dd class="tw-text-sm tw-text-oebblack tw-font-medium md:tw-ms-2">
 												{{ config.expiration | timePeriodPipe }}
 											</dd>
 										</div>
@@ -384,7 +384,7 @@
 											<dt class="tw-text-darkgray">
 												{{ 'RecBadgeDetail.place' | translate }}
 											</dt>
-											<dd class="tw-text-oebblack tw-font-medium md:tw-ml-2">
+											<dd class="tw-text-oebblack tw-font-medium md:tw-ms-2">
 												{{ config.activity_city }}
 											</dd>
 										</div>
@@ -392,10 +392,10 @@
 
 									@if (config.tags.length > 0) {
 										<div class="tw-flex tw-items-start tw-flex-col tw-mt-4">
-											<dt class="tw-text-darkgray md:tw-py-2 md:tw-mr-2 tw-mb-1">Tags</dt>
+											<dt class="tw-text-darkgray md:tw-py-2 md:tw-me-2 tw-mb-1">Tags</dt>
 											<dd class="tw-text-darkgray">
 												@for (tag of config.tags; track tag; let last = $last) {
-													<div class="tag tw-border-darkgray tw-mx-2 tw-ml-0 tw-max-w-24">
+													<div class="tag tw-border-darkgray tw-mx-2 tw-ms-0 tw-max-w-24">
 														{{ tag }}
 													</div>
 												}
@@ -446,7 +446,7 @@
 											<li class="tw-flex tw-items-center tw-text-lg">
 												<ng-icon hlm size="16px" name="lucideExternalLink" />
 												<a
-													class="tw-text-link tw-ml-2 tw-underline"
+													class="tw-text-link tw-ms-2 tw-underline"
 													[href]="item.url"
 													target="_blank"
 													>{{ 'RecBadgeDetail.viewEvidenceUrl' | translate }}</a

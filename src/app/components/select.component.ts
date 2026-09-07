@@ -33,7 +33,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 	template: ` <div [ngClass]="{ 'tw-mt-6 md:tw-mt-7': !noTopMargin }">
 		<div class="tw-max-w-md">
 			@if (label) {
-				<label class="tw-pb-[2px] tw-pl-[3px]" [attr.for]="inputName">
+				<label class="tw-pb-[2px] tw-ps-[3px]" [attr.for]="inputName">
 					<span hlmP class="tw-text-oebblack tw-font-semibold" [innerHTML]="label"></span>
 					@if (formFieldAside) {
 						<span>{{ formFieldAside }}</span>
@@ -98,7 +98,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 			</brn-select>
 
 			@if (isErrorState) {
-				<oeb-input-error class="tw-text-red tw-pl-[3px]" [error]="errorMessageForDisplay"></oeb-input-error>
+				<oeb-input-error class="tw-text-red tw-ps-[3px]" [error]="errorMessageForDisplay"></oeb-input-error>
 			}
 		</div>
 	</div>`,

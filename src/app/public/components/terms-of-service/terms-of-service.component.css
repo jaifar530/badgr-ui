@@ -29,5 +29,5 @@ span {
 ul {
 	list-style: disc;
 	list-style-position: inside;
-	padding-left: 1.2em;
+	padding-inline-start: 1.2em;
 }

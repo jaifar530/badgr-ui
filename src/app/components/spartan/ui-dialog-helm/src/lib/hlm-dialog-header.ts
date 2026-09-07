@@ -13,6 +13,6 @@ import type { ClassValue } from 'clsx';
 export class HlmDialogHeader {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected _computedClass = computed(() =>
-		hlm('tw-flex tw-flex-col tw-space-y-1.5 tw-text-center sm:tw-text-left', this.userClass()),
+		hlm('tw-flex tw-flex-col tw-space-y-1.5 tw-text-center sm:tw-text-start', this.userClass()),
 	);
 }

@@ -28,7 +28,7 @@ import { HlmH1 } from '@spartan-ng/helm/typography';
 			</span>
 
 			<br />
-			<span class="tw-font-black tw-text-purple md:tw-pl-[2ch] tw-break-words tw-inline-block">
+			<span class="tw-font-black tw-text-purple md:tw-ps-[2ch] tw-break-words tw-inline-block">
 				@if (text2Template()) {
 					<ng-container *ngTemplateOutlet="text2Template()" />
 				} @else {

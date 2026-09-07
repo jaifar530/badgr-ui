@@ -6,14 +6,14 @@
 			(input)="onKeywordInput($event)"
 			[placeholder]="'BadgeFilter.keywordPlaceholder' | translate"
 			[attr.aria-label]="'BadgeFilter.keywordPlaceholder' | translate"
-			class="!tw-bg-white tw-w-full min-[880px]:tw-w-96 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pr-10"
+			class="!tw-bg-white tw-w-full min-[880px]:tw-w-96 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pe-10"
 			hlmInput
 			data-testid="keyword-input"
 		/>
 		<ng-icon
 			hlm
 			name="lucideSearch"
-			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
+			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-pointer-events-none tw-text-purple"
 		></ng-icon>
 	</div>
 
@@ -28,14 +28,14 @@
 			(focus)="fromInputType = 'date'"
 			(blur)="fromInputType = fromDate ? 'date' : 'text'"
 			(change)="onFromDateChange($event)"
-			class="!tw-bg-white tw-w-44 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pr-10"
+			class="!tw-bg-white tw-w-44 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pe-10"
 			hlmInput
 			data-testid="from-date"
 		/>
 		<ng-icon
 			hlm
 			name="lucideCalendar"
-			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-text-purple tw-cursor-pointer"
+			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-text-purple tw-cursor-pointer"
 			(click)="openDatePicker(fromDateInput, 'from')"
 		></ng-icon>
 	</div>
@@ -52,14 +52,14 @@
 			(focus)="toInputType = 'date'"
 			(blur)="toInputType = toDate ? 'date' : 'text'"
 			(change)="onToDateChange($event)"
-			class="!tw-bg-white tw-w-44 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pr-10"
+			class="!tw-bg-white tw-w-44 tw-border-1 tw-border-purple tw-border-solid tw-h-12 tw-rounded-lg tw-p-2 tw-pe-10"
 			hlmInput
 			data-testid="to-date"
 		/>
 		<ng-icon
 			hlm
 			name="lucideCalendar"
-			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-right-2 -tw-translate-y-1/2 tw-text-purple tw-cursor-pointer"
+			class="tw-w-8 tw-h-8 tw-absolute tw-top-1/2 tw-end-2 -tw-translate-y-1/2 tw-text-purple tw-cursor-pointer"
 			(click)="openDatePicker(toDateInput, 'to')"
 		></ng-icon>
 	</div>

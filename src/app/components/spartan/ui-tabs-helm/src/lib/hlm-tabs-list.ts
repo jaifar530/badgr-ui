@@ -9,7 +9,7 @@ export const listVariants = cva(
 	{
 		variants: {
 			orientation: {
-				horizontal: 'tw-h-10 tw-space-x-1',
+				horizontal: 'tw-h-10 tw-gap-1',
 				vertical: 'tw-mt-2 tw-flex-col tw-h-fit tw-space-y-1',
 			},
 		},

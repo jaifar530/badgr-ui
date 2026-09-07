@@ -83,7 +83,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[0]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 80px; height: 80px;"
 											viewBox="0 0 100 100"
 										>
@@ -121,7 +121,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[0].image"
 											[alt]="top3Badges[0].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
 											style="top: 0;"
 										/>
 									}
@@ -187,7 +187,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[1]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 64px; height: 64px;"
 											viewBox="0 0 100 100"
 										>
@@ -225,7 +225,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[1].image"
 											[alt]="top3Badges[1].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
 											style="top: 0;"
 										/>
 									}
@@ -242,7 +242,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[0]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 80px; height: 80px;"
 											viewBox="0 0 100 100"
 										>
@@ -280,7 +280,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[0].image"
 											[alt]="top3Badges[0].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
 											style="top: 0;"
 										/>
 									}
@@ -386,7 +386,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[1]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 64px; height: 64px;"
 											viewBox="0 0 100 100"
 										>
@@ -424,7 +424,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[1].image"
 											[alt]="top3Badges[1].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
 											style="top: 0;"
 										/>
 									}
@@ -441,7 +441,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[0]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 80px; height: 80px;"
 											viewBox="0 0 100 100"
 										>
@@ -479,7 +479,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[0].image"
 											[alt]="top3Badges[0].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-20 tw-h-20 tw-object-contain"
 											style="top: 0;"
 										/>
 									}
@@ -496,7 +496,7 @@ export interface Top3Badge extends PodiumItem {
 								@if (top3Badges[2]?.image) {
 									@if (useOctagonFrame) {
 										<svg
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10"
 											style="top: 0; width: 64px; height: 64px;"
 											viewBox="0 0 100 100"
 										>
@@ -534,7 +534,7 @@ export interface Top3Badge extends PodiumItem {
 										<img
 											[src]="top3Badges[2].image"
 											[alt]="top3Badges[2].name"
-											class="tw-absolute tw-left-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
+											class="tw-absolute tw-start-1/2 tw-transform -tw-translate-x-1/2 -tw-translate-y-1/2 tw-z-10 tw-w-16 tw-h-16 tw-object-contain"
 											style="top: 0;"
 										/>
 									}

@@ -20,13 +20,13 @@ import { typedFormGroup } from '../../util/typed-forms';
 						hlm
 						name="lucideCircle"
 						size="120px"
-						class="oeb-icon-stroke-only tw-absolute tw-top-0 tw-left-0"
+						class="oeb-icon-stroke-only tw-absolute tw-top-0 tw-start-0"
 					></ng-icon>
 					<ng-icon
 						hlm
 						name="lucideCircleAlert"
 						size="90px"
-						class="oeb-icon-filled-alert tw-absolute tw-top-1/2 tw-left-1/2 -tw-translate-x-1/2 -tw-translate-y-1/2"
+						class="oeb-icon-filled-alert tw-absolute tw-top-1/2 tw-start-1/2 -tw-translate-x-1/2 -tw-translate-y-1/2"
 					></ng-icon>
 				</div>
 				<div class="tw-flex tw-flex-col tw-items-center tw-gap-4 tw-w-full">
@@ -41,7 +41,7 @@ import { typedFormGroup } from '../../util/typed-forms';
 					</p>
 
 					<form
-						class="tw-w-full tw-text-left"
+						class="tw-w-full tw-text-start"
 						[formGroup]="disableForm.rawControl"
 						(ngSubmit)="submit()"
 						novalidate

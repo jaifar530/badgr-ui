@@ -16,7 +16,7 @@
 					</div>
 
 					<aside
-						class="tw-w-auto tw-hidden md:tw-grid !tw-content-center tw-absolute tw-right-0 tw-top-[17.5%]"
+						class="tw-w-auto tw-hidden md:tw-grid !tw-content-center tw-absolute tw-end-0 tw-top-[17.5%]"
 					>
 						<div class="tw-flex tw-flex-col tw-gap-2">
 							@if (issuer.quotas.nextLevel) {
@@ -28,7 +28,7 @@
 								/>
 
 								<a
-									class="tw-text-right tw-text-link tw-underline tw-mt-6"
+									class="tw-text-end tw-text-link tw-underline tw-mt-6"
 									[href]="this.translate.currentLang === 'de' ? '/page/produkte' : '/page/pricing'"
 									tgarget="_blank"
 									>{{ 'Quotas.FeatureListPlanComparison' | translate }}</a
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				@if (issuer.quotas.key !== 'NETWORK' && issuer.quotas.quotas['NETWORK_CREATE'].quota) {
-					<div class="tw-ml-5 md:tw-ml-0">
+					<div class="tw-ms-5 md:tw-ms-0">
 						<ng-icon size="54px" hlm name="lucidePlus" class="tw-text-oebblack" />
 					</div>
 					<div class="tw-flex tw-items-center tw-gap-4">

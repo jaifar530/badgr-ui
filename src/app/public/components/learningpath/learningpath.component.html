@@ -81,11 +81,11 @@
 						</div>
 					}
 					<ng-template #requestedTemplate>
-						<div class="tw-absolute tw-w-full tw-text-left tw-flex tw-items-center">
-							<span class="tw-bg-purple tw-rounded-[50%] tw-h-[20px] tw-w-[20px] tw-ml-2">
+						<div class="tw-absolute tw-w-full tw-text-start tw-flex tw-items-center">
+							<span class="tw-bg-purple tw-rounded-[50%] tw-h-[20px] tw-w-[20px] tw-ms-2">
 								<ng-icon hlm variant="sm" class="tw-text-white tw-box-border" name="lucideCheck" />
 							</span>
-							<span class="tw-ml-2 md:tw-text-sm tw-text-[8px] tw-text-purple">{{
+							<span class="tw-ms-2 md:tw-text-sm tw-text-[8px] tw-text-purple">{{
 								'LearningPath.successRequestPath' | translate
 							}}</span>
 						</div>
@@ -94,7 +94,7 @@
 				<div
 					class="tw-relative tw-grow tw-px-16 tw-py-8 tw-bg-white tw-rounded-[12px] tw-flex tw-justify-center tw-items-center tw-max-w-[500px] md:tw-min-w-[250px]"
 				>
-					<div class="tw-absolute tw-top-[12px] tw-right-[12px]">
+					<div class="tw-absolute tw-top-[12px] tw-end-[12px]">
 						<img
 							src="assets/oeb/images/learningPath/learningPathIcon.svg"
 							class="tw-w-[40px]"
@@ -152,7 +152,7 @@
 				</div>
 				<div class="tw-col-span-2" *bgAwaitPromises="[issuerLoaded]">
 					<ng-template #progessTemplate>
-						<div class="tw-absolute tw-flex tw-flex-col tw-w-full tw-text-right tw-right-4">
+						<div class="tw-absolute tw-flex tw-flex-col tw-w-full tw-text-end tw-end-4">
 							<span hlmH1 class="tw-font-extrabold tw-text-purple">{{ progressValue() }} %</span>
 							<span hlmP class="tw-mt-2 tw-text-oebblack tw-flex tw-justify-end">
 								<span>{{ learningPath.completed_badges?.length ?? 0 }}</span>

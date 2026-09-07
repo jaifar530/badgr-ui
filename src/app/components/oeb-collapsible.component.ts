@@ -39,7 +39,7 @@ import { NgTemplateOutlet, NgClass } from '@angular/common';
 				} @else {
 					<button class="tw-flex tw-w-full !tw-justify-between tw-items-center">
 						{{ trigger }}
-						<ng-icon hlm class="tw-ml-2" name="lucideChevronDown" hlmMenuIcon />
+						<ng-icon hlm class="tw-ms-2" name="lucideChevronDown" hlmMenuIcon />
 					</button>
 				}
 				<ng-icon

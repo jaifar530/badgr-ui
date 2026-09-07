@@ -28,7 +28,7 @@
 							}}
 						</span>
 					</div>
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						<oeb-button
 							variant="secondary"
 							(click)="goBack()"
@@ -52,7 +52,7 @@
 						class="tw-rounded-[10px] tw-relative"
 						style="background-color: #f5f5f5; height: 170px; padding: 22.97px 10px 10px 10px"
 					>
-						<div class="tw-absolute tw-top-2 tw-right-2">
+						<div class="tw-absolute tw-top-2 tw-end-2">
 							<info-icon [width]="300">
 								{{ 'Dashboard.Competencies.totalHoursTooltip' | translate }}
 							</info-icon>
@@ -106,7 +106,7 @@
 						class="tw-rounded-[10px] tw-relative"
 						style="background-color: #f5f5f5; height: 170px; padding: 22.97px 10px 10px 10px"
 					>
-						<div class="tw-absolute tw-top-2 tw-right-2">
+						<div class="tw-absolute tw-top-2 tw-end-2">
 							<info-icon [width]="300">
 								{{ 'Dashboard.Competencies.totalCompetenciesTooltip' | translate }}
 							</info-icon>
@@ -285,7 +285,7 @@
 												style="width: 40%"
 											>
 												<span
-													class="tw-font-normal tw-text-gray-700 tw-text-right tw-block tw-w-full tw-pr-2"
+													class="tw-font-normal tw-text-gray-700 tw-text-end tw-block tw-w-full tw-pe-2"
 													[style.font-size.px]="getCompetencyFontSize(comp.name)"
 													style="word-break: break-word; hyphens: auto"
 													lang="de"
@@ -322,7 +322,7 @@
 													<ng-icon
 														name="lucideAward"
 														size="14px"
-														class="tw-mr-1"
+														class="tw-me-1"
 														style="color: #492e98"
 													></ng-icon>
 													<span
@@ -347,7 +347,7 @@
 							{{ 'Dashboard.genderDetail.competencyAnalysisDescription' | translate }}
 						</p>
 					</div>
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						<oeb-button
 							variant="secondary"
 							(click)="onBackFromGenderDetail()"
@@ -375,7 +375,7 @@
 									[href]="selectedCompetency.escoUri"
 									target="_blank"
 									rel="noopener noreferrer"
-									class="hover:tw-underline tw-ml-2"
+									class="hover:tw-underline tw-ms-2"
 									style="color: #1400ff"
 								>
 									(ESCO)
@@ -383,7 +383,7 @@
 							}
 						</p>
 					</div>
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						<oeb-button
 							variant="secondary"
 							(click)="onBackFromCompetencyDetail()"
@@ -482,7 +482,7 @@
 					} @else {
 						<div class="tw-overflow-x-auto">
 							<table
-								class="tw-min-w-max tw-w-full tw-mb-8 tw-text-lg tw-text-left tw-rounded-lg tw-border tw-border-solid tw-border-purple tw-border-separate"
+								class="tw-min-w-max tw-w-full tw-mb-8 tw-text-lg tw-text-start tw-rounded-lg tw-border tw-border-solid tw-border-purple tw-border-separate"
 								style="background-color: var(--color-purple)"
 							>
 								<thead class="tw-font-semibold tw-text-white">
@@ -493,12 +493,12 @@
 											{{ 'Dashboard.competencyDetail.table.institution' | translate }}
 										</th>
 										<th
-											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 										>
 											{{ 'Dashboard.competencyDetail.table.badges' | translate }}
 										</th>
 										<th
-											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 										>
 											{{ 'Dashboard.competencyDetail.table.users' | translate }}
 										</th>
@@ -540,14 +540,14 @@
 												</a>
 											</td>
 											<td
-												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 											>
 												<span class="tw-font-normal tw-text-gray-800">{{
 													inst.badgeCount | number
 												}}</span>
 											</td>
 											<td
-												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 											>
 												<span class="tw-font-normal tw-text-gray-800">{{
 													inst.userCount | number
@@ -568,7 +568,7 @@
 							{{ 'Dashboard.competencyAreaDetail.subtitle' | translate }}
 						</p>
 					</div>
-					<div class="tw-ml-auto">
+					<div class="tw-ms-auto">
 						<oeb-button
 							variant="secondary"
 							(click)="onBackFromAreaDetail()"
@@ -698,7 +698,7 @@
 					} @else {
 						<div class="tw-overflow-x-auto">
 							<table
-								class="tw-min-w-max tw-w-full tw-mb-8 tw-text-lg tw-text-left tw-rounded-lg tw-border tw-border-solid tw-border-purple tw-border-separate"
+								class="tw-min-w-max tw-w-full tw-mb-8 tw-text-lg tw-text-start tw-rounded-lg tw-border tw-border-solid tw-border-purple tw-border-separate"
 								style="background-color: var(--color-purple)"
 							>
 								<thead class="tw-font-semibold tw-text-white">
@@ -709,12 +709,12 @@
 											{{ 'Dashboard.competencyAreaDetail.table.institution' | translate }}
 										</th>
 										<th
-											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 										>
 											{{ 'Dashboard.competencyAreaDetail.table.badges' | translate }}
 										</th>
 										<th
-											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+											class="tw-px-4 tw-py-4 tw-leading-8 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 										>
 											{{ 'Dashboard.competencyAreaDetail.table.users' | translate }}
 										</th>
@@ -756,14 +756,14 @@
 												</a>
 											</td>
 											<td
-												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 											>
 												<span class="tw-font-normal tw-text-gray-800">{{
 													inst.badgeCount | number
 												}}</span>
 											</td>
 											<td
-												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-right"
+												class="tw-px-4 tw-py-4 tw-leading-7 tw-border-b tw-border-solid tw-border-purple tw-align-middle tw-text-end"
 											>
 												<span class="tw-font-normal tw-text-gray-800">{{
 													inst.userCount | number

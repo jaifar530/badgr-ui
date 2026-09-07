@@ -2,7 +2,7 @@
 	cursor: pointer;
 	width: 100%;
 	border: none;
-	text-align: left;
+	text-align: start;
 	outline: none;
 	font-size: 28px;
 	font-weight: 600;
@@ -28,10 +28,10 @@
 	background-repeat: no-repeat;
 	background-position: right 10px bottom 50%;
 	padding: 1rem;
-	padding-right: 30px !important;
+	padding-inline-end: 30px !important;
 	background-size: 30px 30px;
 	float: right;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	color: var(--color-red);
 }
 

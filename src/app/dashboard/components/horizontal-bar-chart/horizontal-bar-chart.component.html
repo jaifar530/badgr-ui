@@ -5,7 +5,7 @@
 				<!-- Label Area (Left Side) -->
 				<div class="tw-flex-shrink-0 tw-flex tw-items-center" [style.width.%]="labelWidthPercent()">
 					<span
-						class="bar-label tw-font-normal tw-text-gray-700 tw-text-right tw-block tw-w-full tw-pr-2"
+						class="bar-label tw-font-normal tw-text-gray-700 tw-text-end tw-block tw-w-full tw-pe-2"
 						lang="de"
 					>
 						{{ item.label }}
@@ -30,7 +30,7 @@
 				<div class="tw-flex tw-items-center tw-gap-2" [style.width.%]="computedBarAreaWidth()">
 					<!-- The Bar -->
 					<div
-						class="tw-h-8 tw-flex tw-items-center tw-justify-end tw-pl-3 tw-pr-2 tw-transition-opacity"
+						class="tw-h-8 tw-flex tw-items-center tw-justify-end tw-ps-3 tw-pe-2 tw-transition-opacity"
 						[class.tw-cursor-pointer]="clickable()"
 						[class.hover:tw-opacity-90]="clickable()"
 						[style.background-color]="variant() === 'neutral' ? '#c5d1ff' : '#F5F5F5'"

@@ -132,7 +132,7 @@ import { Network } from '~/issuer/network.model';
 		<ng-template #issuerActionsCellTemplate let-context>
 			<!-- @if (network().current_user_network_role === 'owner') {
 				<oeb-button
-					class="tw-float-right"
+					class="tw-float-end"
 					size="xs"
 					variant="secondary"
 					(click)="removePartner(context.row.original)"

@@ -1,6 +1,6 @@
 /* new style */
 p {
-	text-align: left;
+	text-align: start;
 }
 
 h1 {
@@ -40,7 +40,7 @@ h1 {
 
 .main-paragraph {
 	.heading-sec {
-		padding-left: 10%;
+		padding-inline-start: 10%;
 	}
 
 	> p {
@@ -100,7 +100,7 @@ h1 {
 
 			.mintobadge-logo {
 				width: 290px;
-				padding-left: 15%;
+				padding-inline-start: 15%;
 			}
 		}
 	}
@@ -125,7 +125,7 @@ h1 {
 	}
 
 	> p {
-		text-align: left;
+		text-align: start;
 		padding: 0 30px 0 30px;
 	}
 }
@@ -180,17 +180,17 @@ h1 {
 .circle-logo {
 	position: absolute;
 	top: 1em;
-	left: 3em;
+	inset-inline-start: 3em;
 }
 .network-logo {
 	position: absolute;
-	left: -7.8em;
+	inset-inline-start: -7.8em;
 	bottom: 2em;
 }
 
 .logos-group {
 	position: absolute;
-	right: 0;
+	inset-inline-end: 0;
 	top: 120px;
 }
 
@@ -252,7 +252,7 @@ h1 {
 @media (max-width: 1140px) {
 	.main-paragraph {
 		.heading-sec {
-			padding-left: 7%;
+			padding-inline-start: 7%;
 		}
 	}
 }
@@ -264,7 +264,7 @@ h1 {
 
 	.main-paragraph {
 		.heading-sec {
-			padding-left: 2%;
+			padding-inline-start: 2%;
 		}
 
 		> p {
@@ -285,7 +285,7 @@ h1 {
 
 	.main-paragraph {
 		.heading-sec {
-			padding-left: 0;
+			padding-inline-start: 0;
 		}
 
 		> p {

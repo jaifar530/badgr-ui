@@ -9,7 +9,7 @@
 				<select
 					[ngModel]="selectedYear"
 					(ngModelChange)="onYearChange($event)"
-					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pr-8"
+					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pe-8"
 					style="
 						border: 1px solid #492e98;
 						color: #492e98;
@@ -29,7 +29,7 @@
 				<select
 					[ngModel]="selectedMonth"
 					(ngModelChange)="onMonthChange($event ? +$event : null)"
-					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pr-8"
+					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pe-8"
 					style="
 						border: 1px solid #492e98;
 						color: #492e98;
@@ -51,7 +51,7 @@
 					#badgeTypeSelect
 					[ngModel]="selectedBadgeType"
 					(ngModelChange)="onBadgeTypeChange($event)"
-					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pr-8"
+					class="tw-px-3 tw-py-1.5 tw-rounded-lg tw-text-sm tw-font-bold tw-bg-white tw-cursor-pointer tw-appearance-none tw-pe-8"
 					style="
 						border: 1px solid #492e98;
 						color: #492e98;
@@ -83,7 +83,7 @@
 		<!-- Tooltip (shown on hover, transparent background with OEB Blue border) -->
 		<div
 			#chartTooltip
-			class="tw-absolute tw-hidden tw-px-3 tw-py-2 tw-text-sm tw-pointer-events-none tw-z-50 tw-text-left tw-rounded-md"
+			class="tw-absolute tw-hidden tw-px-3 tw-py-2 tw-text-sm tw-pointer-events-none tw-z-50 tw-text-start tw-rounded-md"
 			style="transition: all 0.2s ease; border: 1px solid #492e98; background-color: rgba(255, 255, 255, 0.95)"
 		>
 			<div class="tw-font-normal tw-text-sm" style="color: #000000" #tooltipDate></div>

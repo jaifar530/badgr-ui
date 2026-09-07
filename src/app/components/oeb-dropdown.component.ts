@@ -37,7 +37,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 					} @else {
 						{{ trigger | translate }}
 					}
-					<ng-icon hlm class="tw-ml-2" name="lucideChevronDown" hlmMenuIcon />
+					<ng-icon hlm class="tw-ms-2" name="lucideChevronDown" hlmMenuIcon />
 				</button>
 			}
 		</button>
@@ -76,7 +76,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 							@if (menuItem.icon) {
 								<ng-icon
 									hlm
-									class="tw-mr-3"
+									class="tw-me-3"
 									[size]="iconClass"
 									name="{{ menuItem.icon }}"
 									hlmMenuIcon

@@ -13,6 +13,6 @@ import type { ClassValue } from 'clsx';
 export class HlmMenuShortcut {
 	public readonly userClass = input<ClassValue>('', { alias: 'class' });
 	protected _computedClass = computed(() =>
-		hlm('tw-ml-auto tw-font-light tw-text-xs tw-tracking-widest tw-opacity-60', this.userClass()),
+		hlm('tw-ms-auto tw-font-light tw-text-xs tw-tracking-widest tw-opacity-60', this.userClass()),
 	);
 }

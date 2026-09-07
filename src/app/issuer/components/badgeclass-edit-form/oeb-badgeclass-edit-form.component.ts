@@ -56,7 +56,7 @@ import { BadgeClassApiService } from '~/issuer/services/badgeclass-api.service';
 										(click)="onChooseCreateNewBadge()"
 										size="sm"
 										[text]="'Issuer.createBadge' | translate"
-										class="tw-inline-block tw-mr-4 tw-mt-4"
+										class="tw-inline-block tw-me-4 tw-mt-4"
 									/>
 									<oeb-button
 										type="button"

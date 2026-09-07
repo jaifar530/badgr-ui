@@ -51,6 +51,6 @@ export class HlmPaginationNext {
 	protected readonly _size = computed<ButtonVariants['size']>(() => (this.iconOnly() ? 'icon' : 'default'));
 
 	protected readonly _computedClass = computed(() =>
-		hlm('tw-gap-1', !this.iconOnly() ? 'sm:tw-pr-2.5' : '', this.userClass()),
+		hlm('tw-gap-1', !this.iconOnly() ? 'sm:tw-pe-2.5' : '', this.userClass()),
 	);
 }

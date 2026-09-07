@@ -10,7 +10,7 @@
 	&__info-icon {
 		position: absolute;
 		top: 8px;
-		right: 8px;
+		inset-inline-end: 8px;
 		z-index: 10;
 	}
 
@@ -118,7 +118,7 @@
 		color: #492e98; // OEB Blau
 		align-self: flex-end;
 		margin-top: auto;
-		margin-right: 0;
+		margin-inline-end: 0;
 
 		&.positive {
 			color: #492e98; // OEB Blau

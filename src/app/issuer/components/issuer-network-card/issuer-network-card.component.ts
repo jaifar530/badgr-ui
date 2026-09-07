@@ -116,7 +116,7 @@ import { OebButtonComponent } from '~/components/oeb-button.component';
 									alt="learning path icon"
 									class="tw-w-7"
 								/>
-								<p class="tw-ml-2">
+								<p class="tw-ms-2">
 									{{ inputAsIssuer()?.learningPathCount | i18nPlural: plural['learningPath'] }}
 								</p>
 							</a>

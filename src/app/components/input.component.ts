@@ -17,7 +17,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 	>
 		<div class="tw-flex tw-justify-between">
 			@if (label) {
-				<label class="tw-pb-[2px] tw-pl-[3px]">
+				<label class="tw-pb-[2px] tw-ps-[3px]">
 					@if (labelStyle) {
 						<span [class]="labelStyle" [innerHTML]="label"></span>
 					} @else {
@@ -26,7 +26,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 					@if (sublabelRightTemplate()) {
 						<ng-container *ngTemplateOutlet="sublabelRightTemplate()" />
 					} @else if (sublabelRight) {
-						<span class="tw-pl-[3px] tw-text-oebblack"> {{ sublabelRight }}</span>
+						<span class="tw-ps-[3px] tw-text-oebblack"> {{ sublabelRight }}</span>
 					}
 				</label>
 			}
@@ -36,7 +36,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 			></ng-content>
 		</div>
 		@if (sublabel) {
-			<p class="tw-pl-[3px] tw-text-purple tw-italic" [innerHTML]="sublabel"></p>
+			<p class="tw-ps-[3px] tw-text-purple tw-italic" [innerHTML]="sublabel"></p>
 		}
 		@if (ariaLabel) {
 			<label class="visuallyhidden" [attr.for]="inputName">{{ ariaLabel }}</label>
@@ -100,7 +100,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 					/>
 					<ng-icon
 						(click)="togglePasswordVisibility()"
-						class="tw-absolute tw-right-3 tw-text-purple"
+						class="tw-absolute tw-end-3 tw-text-purple"
 						hlm
 						[name]="showPassword ? 'lucideEyeOff' : 'lucideEye'"
 					></ng-icon>
@@ -108,7 +108,7 @@ import { HlmP } from '@spartan-ng/helm/typography';
 			}
 			@if (isErrorState) {
 				<oeb-input-error
-					class="tw-text-red tw-pl-[3px] tw-absolute tw-top-full tw-w-full"
+					class="tw-text-red tw-ps-[3px] tw-absolute tw-top-full tw-w-full"
 					[error]="errorMessageForDisplay"
 				></oeb-input-error>
 			}
