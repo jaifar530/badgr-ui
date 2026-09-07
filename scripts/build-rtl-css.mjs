@@ -51,11 +51,51 @@ const key = (rule) => {
 	return parents.join('||') + '::' + rule.selector;
 };
 const srcRules = new Map();
-postcss.parse(src).walkRules((r) => srcRules.set(key(r), r.toString()));
+const srcDecls = new Map();
+postcss.parse(src).walkRules((r) => {
+	srcRules.set(key(r), r.toString());
+	// A selector can appear several times in the source (.loaderdots:before x4), so
+	// merge rather than overwrite — otherwise an earlier rule's sided property is
+	// invisible to the reset pass below and survives to double up under dir=rtl.
+	const props = srcDecls.get(key(r)) ?? new Map();
+	r.walkDecls((d) => props.set(d.prop.toLowerCase(), d.value));
+	srcDecls.set(key(r), props);
+});
+
+/**
+ * Properties whose NAME flips side, and the value that neutralises the side we leave.
+ * Value-only flips (float, text-align, transform) need nothing: the mirrored
+ * declaration reuses the same property name and simply overrides.
+ */
+const SIDE_RESET = new Map([
+	['margin-left', '0'], ['margin-right', '0'],
+	['padding-left', '0'], ['padding-right', '0'],
+	['left', 'auto'], ['right', 'auto'],
+	['border-left', '0'], ['border-right', '0'],
+	['border-left-width', '0'], ['border-right-width', '0'],
+	['border-left-style', 'none'], ['border-right-style', 'none'],
+	['border-left-color', 'currentColor'], ['border-right-color', 'currentColor'],
+	['border-top-left-radius', '0'], ['border-top-right-radius', '0'],
+	['border-bottom-left-radius', '0'], ['border-bottom-right-radius', '0'],
+	['scroll-margin-left', '0'], ['scroll-margin-right', '0'],
+	['scroll-padding-left', '0'], ['scroll-padding-right', '0'],
+]);
 
 const out = postcss.parse(mirrored);
 out.walkRules((r) => {
-	if (srcRules.get(key(r)) === r.toString()) r.remove();
+	if (srcRules.get(key(r)) === r.toString()) return r.remove();
+
+	// The source rule still applies under dir=rtl (it is unscoped), so any sided
+	// property it sets that this mirrored rule no longer sets would survive and
+	// double up — e.g. source margin-left:2px + mirror margin-right:2px = both sides.
+	const fromSrc = srcDecls.get(key(r));
+	if (!fromSrc) return;
+	const here = new Set();
+	r.walkDecls((d) => here.add(d.prop.toLowerCase()));
+	for (const prop of fromSrc.keys()) {
+		if (!SIDE_RESET.has(prop) || here.has(prop)) continue;
+		r.append({ prop, value: SIDE_RESET.get(prop) });
+	}
 });
 // @keyframes cannot be scoped by a selector: a mirrored copy keeps the original's
 // name and, loading after it, would override the animation for EVERY user including
