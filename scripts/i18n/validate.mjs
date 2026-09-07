@@ -15,7 +15,7 @@ const EN = 'src/assets/i18n/en.json';
 const AR = 'src/assets/i18n/ar.json';
 
 /** Namespaces whose Arabic is complete and must stay complete. Grow this per wave. */
-const SHIPPED = ['General', 'NavItems', 'Login', 'Theqa', 'Verify', 'Signup', 'Captcha', 'Welcome', 'Start', 'BadgeFilter', 'RequestBadge', 'Badge', 'RecBadge', 'Issuer', 'CreateBadge', 'EditBadge', 'Legend', 'ErrorDialog', 'NounProject', 'OEBComponents', 'IssueQr', 'LearningPath', 'LearningPathEditor', 'Profile', 'BadgeCollection', 'RecBadgeDetail', 'QrCode', 'TwoFactor', 'FAQ', 'TermsOfService', 'DashboardTeaser', 'PDFEditorTeaser', 'Newsletter'];
+const SHIPPED = ['General', 'NavItems', 'Login', 'Theqa', 'Verify', 'Signup', 'Captcha', 'Welcome', 'Start', 'BadgeFilter', 'RequestBadge', 'Badge', 'RecBadge', 'Issuer', 'CreateBadge', 'EditBadge', 'Legend', 'ErrorDialog', 'NounProject', 'OEBComponents', 'IssueQr', 'LearningPath', 'LearningPathEditor', 'Profile', 'BadgeCollection', 'RecBadgeDetail', 'QrCode', 'TwoFactor', 'FAQ', 'TermsOfService', 'DashboardTeaser', 'PDFEditorTeaser', 'Newsletter', 'Quotas', 'PDFTemplate'];
 
 /** Keys whose Arabic is legitimately identical to English (brand names, codes). */
 const SAME_AS_EN_OK = new Set([
@@ -26,6 +26,11 @@ const SAME_AS_EN_OK = new Set([
 	'PDFEditorTeaser.customImage',
 	// A lone full stop, appended after a link. Identical in both scripts.
 	'TwoFactor.reminder.hintSuffix',
+	// A date-format placeholder, a domain, a colon and a URL: nothing to translate.
+	'PDFTemplate.previewCanvasDateText2',
+	'PDFTemplate.previewCanvasCreatedText2',
+	'PDFTemplate.previewCanvasCompetenceSublineText4',
+	'PDFTemplate.previewCanvasFootnoteText2',
 ]);
 
 /** Keys that may carry no Arabic characters at all. */
