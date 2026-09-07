@@ -26,6 +26,9 @@ jobs:
         run: |
           npm run verify:i18n
           npm run verify:rtl-css
+          # The default language is declared in two files; a mismatch flips direction
+          # after boot, which no other test would catch.
+          node scripts/assert-default-lang-sync.mjs
           # No NEW physical direction utilities - they do not mirror under dir=rtl.
           # Logical forms: ms/me, ps/pe, start/end, text-start/text-end, gap.
           BAD=$(git diff --unified=0 origin/wissam...HEAD -- "*.html" "*.ts" 2>/dev/null | grep "^+" | grep -v "^+++" | grep -E "tw-(ml|mr|pl|pr|left|right)-|tw-text-(left|right)|tw-space-x-" | grep -vc "physical-ok" || true)

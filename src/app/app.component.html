@@ -57,8 +57,12 @@
 
 					<!-- Language -->
 					<div class="navitem" class="tw-flex tw-gap-1 tw-items-center tw-text-purple tw-text-[18px]/[1.2em]">
-						<!-- DE toggle hidden (Wissam): German unused; translations remain in the bundle -->
-						<button (click)="changeLng('en')" class="tw-text-purple tw-text-[length:inherit]">
+						<!-- AR|EN toggle. German stays in the bundle but is not offered. -->
+						<button (click)="changeLng('ar')" lang="ar" [attr.aria-current]="selectedLng === 'ar' ? 'true' : null" class="tw-text-purple tw-text-[length:inherit]">
+							<span [ngStyle]="{ 'font-weight': selectedLng === 'ar' ? 'bold' : 'normal' }">العربية</span>
+						</button>
+						<span aria-hidden="true">|</span>
+						<button (click)="changeLng('en')" lang="en" [attr.aria-current]="selectedLng === 'en' ? 'true' : null" class="tw-text-purple tw-text-[length:inherit]">
 							<span [ngStyle]="{ 'font-weight': selectedLng === 'en' ? 'bold' : 'normal' }">EN</span>
 						</button>
 						<ng-icon hlm name="lucideGlobe" class="tw-ms-1"></ng-icon>
@@ -128,8 +132,12 @@
 
 					<!-- Language -->
 					<div class="navitem" class="tw-flex tw-gap-1 tw-items-center tw-text-purple tw-text-[18px]/[1.2em]">
-						<!-- DE toggle hidden (Wissam): German unused; translations remain in the bundle -->
-						<button (click)="changeLng('en')" class="tw-text-purple tw-text-[length:inherit]">
+						<!-- AR|EN toggle. German stays in the bundle but is not offered. -->
+						<button (click)="changeLng('ar')" lang="ar" [attr.aria-current]="selectedLng === 'ar' ? 'true' : null" class="tw-text-purple tw-text-[length:inherit]">
+							<span [ngStyle]="{ 'font-weight': selectedLng === 'ar' ? 'bold' : 'normal' }">العربية</span>
+						</button>
+						<span aria-hidden="true">|</span>
+						<button (click)="changeLng('en')" lang="en" [attr.aria-current]="selectedLng === 'en' ? 'true' : null" class="tw-text-purple tw-text-[length:inherit]">
 							<span [ngStyle]="{ 'font-weight': selectedLng === 'en' ? 'bold' : 'normal' }">EN</span>
 						</button>
 						<ng-icon hlm name="lucideGlobe" class="tw-ms-1"></ng-icon>
@@ -169,8 +177,12 @@
 			<div class="mobilenav-x-navitems">
 				<!-- Language -->
 				<div class="mobilenav-x-label tw-flex tw-gap-1 tw-items-center tw-text-white tw-mb-8 tw-mt-8">
-					<!-- DE toggle hidden (Wissam) -->
-					<button (click)="changeLng('en')" class="tw-text-white tw-text-[14px]/[1.2em]">
+					<!-- AR|EN toggle. German stays in the bundle but is not offered. -->
+					<button (click)="changeLng('ar')" lang="ar" [attr.aria-current]="selectedLng === 'ar' ? 'true' : null" class="tw-text-white tw-text-[14px]/[1.2em]">
+						<span [ngStyle]="{ 'font-weight': selectedLng === 'ar' ? 'bold' : 'normal' }">العربية</span>
+					</button>
+					<span aria-hidden="true">|</span>
+					<button (click)="changeLng('en')" lang="en" [attr.aria-current]="selectedLng === 'en' ? 'true' : null" class="tw-text-white tw-text-[14px]/[1.2em]">
 						<span [ngStyle]="{ 'font-weight': selectedLng === 'en' ? 'bold' : 'normal' }">EN</span>
 					</button>
 				</div>
@@ -224,8 +236,12 @@
 			<div class="mobilenav-x-navitems">
 				<!-- Language -->
 				<div class="mobilenav-x-label tw-flex tw-gap-1 tw-items-center tw-text-white tw-mb-8 tw-mt-8">
-					<!-- DE toggle hidden (Wissam) -->
-					<button (click)="changeLng('en')" class="tw-text-white tw-text-[14px]/[1.2em]">
+					<!-- AR|EN toggle. German stays in the bundle but is not offered. -->
+					<button (click)="changeLng('ar')" lang="ar" [attr.aria-current]="selectedLng === 'ar' ? 'true' : null" class="tw-text-white tw-text-[14px]/[1.2em]">
+						<span [ngStyle]="{ 'font-weight': selectedLng === 'ar' ? 'bold' : 'normal' }">العربية</span>
+					</button>
+					<span aria-hidden="true">|</span>
+					<button (click)="changeLng('en')" lang="en" [attr.aria-current]="selectedLng === 'en' ? 'true' : null" class="tw-text-white tw-text-[14px]/[1.2em]">
 						<span [ngStyle]="{ 'font-weight': selectedLng === 'en' ? 'bold' : 'normal' }">EN</span>
 					</button>
 				</div>

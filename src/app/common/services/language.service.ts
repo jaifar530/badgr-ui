@@ -12,7 +12,7 @@ export const lngs = ['ar', 'en'];
  * WISSAM-DEFAULT-LANG — must stay identical to the default in the inline <script>
  * in src/index*.html. A mismatch produces a first-paint direction flip.
  */
-export const DEFAULT_LANG = 'en';
+export const DEFAULT_LANG = 'ar';
 
 const DIR: Record<string, 'rtl' | 'ltr'> = { ar: 'rtl', en: 'ltr', de: 'ltr' };
 

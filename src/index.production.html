@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 	<head>
 		<script>
 			/* Wissam: set lang+dir before first paint. Angular re-applies the same values
@@ -13,7 +13,7 @@
 					if (m) { l = m[1].toLowerCase(); localStorage.setItem("lang", l); }
 					else { l = (localStorage.getItem("lang") || "").toLowerCase(); }
 				} catch (e) { /* storage blocked: fall through to the default */ }
-				if (!DIR[l]) l = "en"; /* WISSAM-DEFAULT-LANG */
+				if (!DIR[l]) l = "ar"; /* WISSAM-DEFAULT-LANG */
 				document.documentElement.lang = l;
 				document.documentElement.dir = DIR[l];
 			})();
