@@ -104,7 +104,7 @@
 	}
 
 	&__legend-label {
-		font-family: 'Rubik', sans-serif, 'Tajawal';
+		font-family: 'Rubik', 'Tajawal', sans-serif;
 		font-size: 14px;
 		font-weight: 600;
 		color: #333;
@@ -112,7 +112,7 @@
 	}
 
 	&__legend-value {
-		font-family: 'Rubik', sans-serif, 'Tajawal';
+		font-family: 'Rubik', 'Tajawal', sans-serif;
 		font-size: 12px;
 		color: #666;
 		margin: 0;
@@ -207,7 +207,7 @@
 	&__total {
 		position: relative;
 		z-index: 1;
-		font-family: 'Rubik', sans-serif, 'Tajawal';
+		font-family: 'Rubik', 'Tajawal', sans-serif;
 		font-weight: 700;
 		font-size: 28px;
 		color: #000;
@@ -218,7 +218,7 @@
 	&__total-label {
 		position: relative;
 		z-index: 1;
-		font-family: 'Rubik', sans-serif, 'Tajawal';
+		font-family: 'Rubik', 'Tajawal', sans-serif;
 		font-size: 14px;
 		color: #666;
 		margin: 4px 0 0 0;

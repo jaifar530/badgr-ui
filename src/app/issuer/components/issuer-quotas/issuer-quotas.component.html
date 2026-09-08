@@ -38,14 +38,14 @@
 					</aside>
 				</div>
 			</header>
-			<h2 class="tw-uppercase tw-text-oebblack tw-font-[900] tw-text-[30px]/[1.2em] tw-font-[rubik] tw-mt-5">
+			<h2 class="tw-uppercase tw-text-oebblack tw-font-[900] tw-text-[30px]/[1.2em] tw-font-rubik tw-mt-5">
 				{{ 'Quotas.page.activeQuota' | translate }} {{ issuer.name }}:
 			</h2>
 			<div class="tw-mt-5 tw-flex tw-flex-col md:tw-flex-row md:tw-items-center tw-gap-2 md:tw-gap-8 tw-mb-8">
 				<div class="tw-flex tw-items-center tw-gap-4">
 					<img [src]="`/assets/oeb/images/quotas/logo_${issuer.quotas.key.toLowerCase()}.svg`" width="100" />
 					<div>
-						<p class="tw-text-oebblack tw-font-bold tw-text-[30px]/[1.2em] tw-font-[rubik] tw-mb-2">
+						<p class="tw-text-oebblack tw-font-bold tw-text-[30px]/[1.2em] tw-font-rubik tw-mb-2">
 							{{ issuer.quotas.name }}
 							@if (isCustom()) {
 								<span>(Individuelle Konditionen*)</span>
@@ -63,7 +63,7 @@
 					<div class="tw-flex tw-items-center tw-gap-4">
 						<img [src]="`/assets/oeb/images/quotas/logo_network.svg`" width="100" />
 						<div>
-							<p class="tw-text-oebblack tw-font-bold tw-text-[30px]/[1.2em] tw-font-[rubik] tw-mb-2">
+							<p class="tw-text-oebblack tw-font-bold tw-text-[30px]/[1.2em] tw-font-rubik tw-mb-2">
 								{{ 'General.network' | translate }}
 							</p>
 							<p>

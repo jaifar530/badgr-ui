@@ -92,7 +92,7 @@ $z-index-highest: 5;
 		url('#{$base-path}fonts/opensans-semibolditalic-webfont.woff') format('woff');
 }
 
-$font-family: 'Open Sans', sans-serif, 'Tajawal';
+$font-family: 'Open Sans', 'Tajawal', sans-serif;
 
 $font-size-small2: 12px;
 $font-size-small1: 14px;

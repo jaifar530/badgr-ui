@@ -54,8 +54,12 @@ jobs:
           # The mirrored legacy stylesheet must reach the bundle.
           # The CSS minifier strips the attribute quotes: dir="rtl" ships as dir=rtl.
           R=$(cat dist/styles-*.css | grep -oE 'dir=.?rtl' | wc -l)
-          echo "palette=$P DE=$D umami=$U tajawal=$T ar=$A html-dir=$H dir-script=$S rtl-css=$R"
-          [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ] && [ "$A" -gt 0 ] && [ "$H" -gt 0 ] && [ "$S" -gt 0 ] && [ "$R" -gt 0 ]
+          # A generic family (sans-serif/serif/monospace) ALWAYS matches, so any font
+          # listed after one is unreachable. Tajawal must precede the generic or Arabic
+          # silently falls back to a system face.
+          F=$(cat dist/styles-*.css | grep -oE 'font-family:[^;}]*' | grep -icE '(sans-serif|serif|monospace)[^,]*,[^;}]*Tajawal' || true)
+          echo "palette=$P DE=$D umami=$U tajawal=$T ar=$A html-dir=$H dir-script=$S rtl-css=$R font-order-bad=$F"
+          [ "$P" -gt 0 ] && [ "$D" -eq 0 ] && [ "$U" -eq 0 ] && [ "$T" -gt 0 ] && [ "$A" -gt 0 ] && [ "$H" -gt 0 ] && [ "$S" -gt 0 ] && [ "$R" -gt 0 ] && [ "$F" -eq 0 ]
 
 
       - name: Brand the page title

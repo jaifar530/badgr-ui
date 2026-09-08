@@ -13,7 +13,13 @@ module.exports = {
 	prefix: 'tw-',
 	content: ['./src/**/*.{html,ts}', './components/**/*.{html,ts}'],
 	theme: {
-		fontFamily: { body: ['Tajawal', 'rubik', 'Open Sans', 'sans-serif'] },
+		// Tajawal sits before the generic in every stack: a generic family always
+		// matches, so anything after it is unreachable. Rubik carries no Arabic
+		// glyphs, so Arabic falls through Rubik to Tajawal per character.
+		fontFamily: {
+			body: ['Tajawal', 'rubik', 'Open Sans', 'sans-serif'],
+			rubik: ['Rubik', 'Tajawal', 'sans-serif'],
+		},
 		container: {
 			center: true,
 			padding: '2rem',

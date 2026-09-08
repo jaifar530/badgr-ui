@@ -8,12 +8,12 @@
 @tailwind utilities;
 
 html {
-	font-family: 'Tajawal', rubik, sans-serif;  /* Wissam: Tajawal (latin+arabic) */
+	font-family: rubik, 'Tajawal', sans-serif;  /* Wissam: Tajawal (latin+arabic) */
 	scrollbar-gutter: stable;
 }
 
 .oeb {
-	font-family: 'Tajawal', rubik, sans-serif;  /* Wissam: Tajawal (latin+arabic) */
+	font-family: rubik, 'Tajawal', sans-serif;  /* Wissam: Tajawal (latin+arabic) */
 }
 /* colors from mycelia */
 :root {
@@ -21,7 +21,7 @@ html {
 	// which has Arabic coverage, and 292 legacy rules read them. This block wins on
 	// source order (screen.css is listed before oeb_styles.scss in angular.json —
 	// do not reorder that array). --font-family-code stays monospace on purpose.
-	--font-family: 'Tajawal', rubik, 'Open Sans', sans-serif;
+	--font-family: rubik, 'Open Sans', 'Tajawal', sans-serif;
 	--font-family-condensed: 'Tajawal', rubik, sans-serif;
 	--font-family-header: 'Tajawal', rubik, serif;
 

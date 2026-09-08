@@ -26,7 +26,7 @@ import { HlmIcon } from '@spartan-ng/helm/icon';
 			<div class="forminput-x-labelrow">
 				<label [class]="labelStyle" for="image_field{{ uniqueIdSuffix }}">{{ label }}</label>
 				@if (sublabelRight) {
-					<span class="tw-me-auto tw-ms-2 tw-font-[rubik] tw-text-oebblack tw-text-sm tw-font-normal">{{
+					<span class="tw-me-auto tw-ms-2 tw-font-rubik tw-text-oebblack tw-text-sm tw-font-normal">{{
 						sublabelRight
 					}}</span>
 				}
